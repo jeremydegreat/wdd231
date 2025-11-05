@@ -1,0 +1,375 @@
+@media (min-width: 601px) {
+    :root {
+    --heading-color: #0B2B8c;
+    --background-color: #F9FAFB;
+    --navbar-color: #0B38BF;
+    --accent-color: #6089BF;
+    --section-Bgcolor: #C9EEF2;
+    --footer-color: #222940;
+
+    /* Text system */
+    --text-main: #1A1A1A;
+    --text-heading: #0B2B8C;
+    --text-on-dark: #FFFFFF;
+    }
+
+    /* ===================================
+            Universal Selector
+    =================================== */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1, h2, h3 {
+        font-family: "Poppins", sans-serif;
+    }
+    body {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    /* ===================================
+            Header Styles  
+    ================================ */
+    header {
+        background-color: var(--heading-color);
+        color: white;
+        padding: 0 2rem;
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+    }
+
+    /* ---Logo--- */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo img {
+        max-width: 150px;
+        height: 50px;
+        object-fit: contain;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+        border-radius: 10px;
+    }
+
+    .logo span {
+        flex: 1;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* ===================================
+            Navbar Styles  
+    ================================ */
+    .navbar {
+        background-color: var(--navbar-color);
+        padding: 1rem 2rem;
+        height: 80px;
+        display: flex !important;
+        position: sticky;
+        top: 120px;
+        left: 0;
+        right: 0;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row !important;
+    }
+
+    .navbar ul li a {
+        position: relative;
+        background: none;
+        color: white;
+        width: auto;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 0;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar ul li a.active {
+        padding: 0 .5rem;
+        color: #F9FAFB;
+        border-top: 2px solid #0EA5E9;
+        border-radius: 5px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .navbar ul li a:hover {
+        color: #f1f1f1;
+        margin: 0;
+        width: auto;
+        background-color: none !important;
+    }
+
+    .navbar ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 0;
+        height: 3px;
+        background: white;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+    }
+
+    .navbar ul li a:hover::after,
+    .navbar ul li a:focus::after {
+        width: 100%;
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    .navbar.show {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+
+    /* ===================================
+            Main section Styles  
+    =================================== */
+    .main-container {
+        margin-top: 100px;
+        padding: 2rem;
+        background-color: var(--background-color);
+        min-height: calc(100vh - 210px);
+    }
+
+    .main-container h1 {
+        color: var(--heading-color);
+        margin-bottom: 2.5rem;
+        font-size: 2.5rem;
+    }
+
+    .section-container {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 2fr 1fr;
+        justify-items: center;
+        align-items: flex-start;
+    }
+
+    .base {
+        background: var(--heading-color);
+        color: var(--text-on-dark);
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    section {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        background-color: var(--section-Bgcolor);
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .about-me p {
+        width: 80%;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .photoImg {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 10px;
+    }
+
+    /* =====Course Styling===== */
+    .section-container .course-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .filter-buttons button {
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--heading-color);
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .filter-buttons button:hover {
+        background-color: var(--accent-color);
+        color: #111827;
+        transform: scale(1.075);
+    }
+
+    .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .course-card {
+    background-color: var(--section-Bgcolor);
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .course-card.completed {
+    background-color: #E6F9E8; /* light green for completed */
+    border-color: #33A852;
+    position: relative;
+    }
+
+    .course-card.completed::after {
+    content: "✔ Course Completed";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #33A852;
+    color: white;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    }
+
+    .total-credits {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+    }
+
+    /* =========Socials Styling========= */
+    .socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -2rem;
+    }
+
+    .social-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        padding: 2rem;
+    }
+
+    .social-links a {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .social-links a svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ===================================
+            Footer Styling
+    =================================== */
+    footer {
+        background-color: var(--footer-color);
+        color: #EDF2F7;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #lastmodified {
+        color: red;
+    }
+
+    #currentyear {
+        color: #f16a6a;
+    }
+}
+
+
+
+
+
+
+

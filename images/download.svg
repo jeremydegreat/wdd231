@@ -1,0 +1,22 @@
+<!-- Save as wdd231-logo-mark.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 224" role="img" aria-label="WDD231 logo mark">
+  <defs>
+    <linearGradient id="gradA" x1="0" x2="1">
+      <stop offset="0" stop-color="#0B38BF"></stop>
+      <stop offset="1" stop-color="#2563EB"></stop>
+    </linearGradient>
+    <linearGradient id="gradB" x1="0" x2="1">
+      <stop offset="0" stop-color="#F97316"></stop>
+      <stop offset="1" stop-color="#FFB86B"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="0" y="0" width="224" height="224" rx="28" fill="url(#gradA)"></rect>
+
+  <!-- Stylized 'W' -->
+  <path d="M36 170 L72 56 L108 128 L144 56 L180 170" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Accent 'D' curve -->
+  <path d="M140 60 C180 60 200 88 180 118 C160 148 120 148 100 118" fill="none" stroke="url(#gradB)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
