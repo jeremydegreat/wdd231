@@ -136,8 +136,8 @@
         bottom: -10px;
         left: 50%;
         width: 0;
-        height: 3px;
-        background: white;
+        height: 2px;
+        background: #E6F9E8;
         transform: translateX(-50%);
         transition: width 0.3s ease;
     }
@@ -359,11 +359,11 @@
     }
 
     #lastmodified {
-        color: red;
+        color: yellow;
     }
 
     #currentyear {
-        color: #f16a6a;
+        color: yellow;
     }
 }
 
