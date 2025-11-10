@@ -1,0 +1,136 @@
+:root {
+    --headerh1-color: #FFF;
+    --headbgolor: #024959;
+    --footerbg-color: #593E25;
+    --accent-color: #F2AE30;
+    --text-color: #A1A2A6;
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    background-color: var(--footerbg-color);
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+
+
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--headerh1-color);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+footer,
+main {
+    background: var(--text-color);
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .5rem;
+}
+
+/* ==================================
+         Card Styles 
+ ==================================*/
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+#cards section {
+    background: var(--headbgolor);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#cards .dob,
+#cards .pob,
+#cards h2 {
+    color: var(--headerh1-color);
+    margin-bottom: 1rem;
+}
+
+#cards img {
+    width: 100%;
+    height: auto;
+    max-width: 340px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+/* ========================================
+          Footer Styling
+=========================================*/
+footer {
+    background: var(--footerbg-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.3rem;
+}
+
+/* ========================================
+          Media Queries 
+=========================================*/
+@media screen and (max-width: 639px) {
+    #cards {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+
+    header {
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #cards section {
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (min-width: 640px) {
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    #cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

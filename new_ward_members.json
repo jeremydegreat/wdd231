@@ -1,0 +1,56 @@
+{
+    "ward_members": [
+        {
+            "family_name": "Doe",
+            "date_moved_in": "2024-05-15",
+            "number_of_people": 4,
+            "visited_by_bishopric": false,
+            "family_members": [
+                {
+                    "name": "John Doe",
+                    "age": 35,
+                    "birth_date": "1985-06-12"
+                },
+                {
+                    "name": "Jane Doe",
+                    "age": 33,
+                    "birth_date": "1987-09-22"
+                },
+                {
+                    "name": "Jimmy Doe",
+                    "age": 8,
+                    "birth_date": "2012-04-19"
+                },
+                {
+                    "name": "Jenny Doe",
+                    "age": 5,
+                    "birth_date": "2017-11-30"
+                }
+            ]
+        },
+        {
+            "family_name": "Smith",
+            "date_moved_in": "2024-06-01",
+            "number_of_people": 3,
+            "visited_by_bishopric": true,
+            "family_members": [
+                {
+                    "name": "Alice Smith",
+                    "age": 29,
+                    "birth_date": "1995-02-14"
+                },
+                {
+                    "name": "Bob Smith",
+                    "age": 31,
+                    "birth_date": "1993-08-09"
+                },
+                {
+                    "name": "Charlie Smith",
+                    "age": 2,
+                    "birth_date": "2022-12-05"
+                }
+            ]
+        }
+
+    ]
+}
