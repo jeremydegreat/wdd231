@@ -1,0 +1,14 @@
+:root {
+    --whitesmoke: #f5f5f5;
+    --primary-color: #071e22;
+    --accent1-color: #dcf763;
+    --accent2-color: #e9f5db;
+    --bodybg-color: #f3f8fe;
+    --footerbg-color: #1e1d22;
+}
+
+
+
+body {
+    background-color: whie;
+}

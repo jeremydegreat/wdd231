@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
+  <style>
+    :root {
+      --primary: #1d7874;   /* Circle */
+      --accent:  #679289;   /* Buildings */
+      --gold:    #f4c095;   /* Handshake */
+      --text:    #071e22;   /* Text */
+    }
+    .circle { fill: var(--primary); }
+    .sky { fill: #ffffff; }
+    .b { fill: var(--accent); }
+    .handL { fill: var(--gold); }
+    .handR { fill: #fff; stroke: var(--text); stroke-width: 1.4; }
+    .t1 { fill: var(--text); font-family: 'Poppins', sans-serif; font-size: 34px; font-weight: 700; }
+    .t2 { fill: var(--text); font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 500; }
+  </style>
+
+  <!-- Emblem -->
+  <g transform="translate(25,20)">
+    <circle class="circle" cx="55" cy="55" r="55"></circle>
+    <circle class="sky" cx="55" cy="55" r="42"></circle>
+
+    <!-- Buildings -->
+    <g transform="translate(32,28)">
+      <rect class="b" x="0" y="22" width="16" height="30" rx="2"></rect>
+      <rect class="b" x="20" y="10" width="14" height="42" rx="2"></rect>
+      <rect class="b" x="38" y="18" width="16" height="34" rx="2"></rect>
+    </g>
+
+    <!-- Handshake -->
+    <g transform="translate(26,70)">
+      <path class="handL" d="M5 15c10-5 28-6 40-2l-4 9c-10-4-22 0-32 5-6 3-10-5-4-12z"></path>
+      <path class="handR" d="M50 15c-10-5-28-6-40-2l4 9c10-4 22 0 32 5 6 3 10-5 4-12z"></path>
+    </g>
+  </g>
+
+  <!-- Text -->
+  <text class="t1" x="140" y="65">AWKA</text>
+  <text class="t2" x="140" y="95">Chamber of Commerce</text>
+</svg>
