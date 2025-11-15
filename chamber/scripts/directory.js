@@ -1,11 +1,50 @@
+// ...existing code...
 document.addEventListener('DOMContentLoaded', () => {
     const lastModified = document.querySelector('#lastmodified');
     const membersContainer = document.getElementById("membersContainer");
     const gridViewBtn = document.getElementById("gridView");
     const listViewBtn = document.getElementById("listView");
 
+    if (!membersContainer) {
+        console.error('Members container not found. Add an element with id="membersContainer" in directory.html');
+        return;
+    }
+
     // Last modified
-    lastModified.textContent = `Last modified: ${document.lastModified}`;
+    lastModified && (lastModified.textContent = `Last modified: ${document.lastModified}`);
+
+    let membersData = []; // store fetched members
+
+    // ...existing code...
+    // Hamburger Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navlinks = document.querySelector('.navlinks');
+
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navlinks.classList.toggle('active');
+        hamburger.classList.toggle('active');  /* animate hamburger icon */
+    });
+
+    // Close navlinks when clicking anywhere else on the document
+    document.addEventListener('click', (e) => {
+        if (navlinks.classList.contains('active') && 
+            !hamburger.contains(e.target) && 
+            !navlinks.contains(e.target)) {
+            navlinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+
+    // Close navlinks when clicking a nav link
+    const navItems = document.querySelectorAll('.navlinks li a');
+    navItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            navlinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+// ...existing code...
 
     // Fetch members data
     async function fetchMembers() {
@@ -13,15 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('data/members.json'); // ensure this file exists
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const data = await response.json();
-            displayMembers(data.members);
+            membersData = data.members || [];
+            renderMembers();
         } catch (error) {
             console.error('Error fetching members:', error);
             membersContainer.innerHTML = '<p>Error loading members. Please try again later.</p>';
         }
     }
 
-    // Display members in grid/list
-    function displayMembers(members) {
+    // Render depending on view
+    function renderMembers() {
+        if (membersContainer.classList.contains('list-view')) {
+            renderTable(membersData);
+        } else {
+            renderGrid(membersData);
+        }
+    }
+
+    // Grid (cards) view
+    function renderGrid(members) {
         membersContainer.innerHTML = ''; // clear container
         members.forEach((member) => {
             const card = document.createElement('div');
@@ -29,25 +78,62 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
                 <img src="${member.image}" alt="${member.name}" loading="lazy">
                 <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank">Visit Website</a>
+                <p>${member.address || ''}</p>
+                <p>${member.phone || ''}</p>
+                <a href="${member.website || '#'}" target="_blank" rel="noopener">Visit Website ➡</a>
             `;
             membersContainer.appendChild(card);
         });
     }
 
+    // List (table) view — colored rows / header
+    function renderTable(members) {
+        membersContainer.innerHTML = ''; // clear container
+
+        const table = document.createElement('table');
+        table.className = 'members-table';
+
+        const thead = document.createElement('thead');
+        thead.innerHTML = `
+            <tr>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Website</th>
+            </tr>
+        `;
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+        members.forEach((member) => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${member.name}</td>
+                <td>${member.address || ''}</td>
+                <td>${member.phone || ''}</td>
+                <td>${member.website ? `<a href="${member.website}" target="_blank" rel="noopener">${member.website}</a>` : ''}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        membersContainer.appendChild(table);
+    }
+
     // Toggle view
-    gridViewBtn.addEventListener('click', () => {
-        membersContainer.className = 'grid-view';
+    gridViewBtn && gridViewBtn.addEventListener('click', () => {
+        membersContainer.classList.remove('list-view');
+        membersContainer.classList.add('grid-view');
         gridViewBtn.classList.add('active');
-        listViewBtn.classList.remove('active');
+        listViewBtn && listViewBtn.classList.remove('active');
+        renderMembers();
     });
 
-    listViewBtn.addEventListener('click', () => {
-        membersContainer.className = 'list-view';
+    listViewBtn && listViewBtn.addEventListener('click', () => {
+        membersContainer.classList.remove('grid-view');
+        membersContainer.classList.add('list-view');
         listViewBtn.classList.add('active');
-        gridViewBtn.classList.remove('active');
+        gridViewBtn && gridViewBtn.classList.remove('active');
+        renderMembers();
     });
 
     // Fetch on load

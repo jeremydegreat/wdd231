@@ -38,7 +38,7 @@
 
         <!-- Logo -->
         <div class="logo">
-            <img src="images/logoacoc.svg" alt="Awka chamber of commerce official logo" class="logo-img">
+            <img src="images/logoacoc.svg" alt="Awka chamber of commerce official logo">
         </div>
 
         <!-- Hamburger -->
@@ -54,7 +54,8 @@
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#directory">Directory</a></li>
                 <li><a href="#join">Join</a></li>
-                <li><a href="#discover">Discover</a><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="black" stroke-width="2"/><path d="M12 3 A9 9 0 0 0 12 21" fill="black"/></svg></li>
+                <li><a href="#discover">Discover</a></li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="whitesmoke"><circle cx="12" cy="12" r="9" stroke="black" stroke-width="2"/><path d="M12 3 A9 9 0 0 0 12 21" fill="black"/></svg>
             </ul>
         </nav>
     </header>
@@ -62,14 +63,16 @@
     <main class="main">
         <div class="view-controls">
             <button id="gridView" class="view-btn active">Grid View</button>
-            <button id="listView" class="view-btn">List View</button>
+            <button id="listView" class="view-btn right">List View</button>
         </div>
-        <div class="grid-view" id="membersCard"></div>
+        <div class="grid-view" id="membersContainer"></div>
     </main>
 
     <footer class="footer">
         <div class="footer-container">
-            <img src="images/logoacoc.svg" alt="ACOC logo">
+            <div class="logo-container">
+                <img src="images/logoacoc.svg" alt="ACOC logo">
+            </div>
             <div class="footer-content">
                 <div class="footer-address">
                     <h4>Awka Chamber Of Commerce</h4>

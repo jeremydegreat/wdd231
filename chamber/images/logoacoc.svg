@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
   <style>
     :root {
-      --primary: #1d7874;   /* Circle */
-      --accent:  #679289;   /* Buildings */
-      --gold:    #f4c095;   /* Handshake */
-      --text:    #071e22;   /* Text */
+      --primary: #cff623ff;   /* Circle */
+      --accent:  #071e22;   /* Buildings */
+      --gold:    #071e22;   /* Handshake */
+      --text:    #fff;   /* Text */
     }
     .circle { fill: var(--primary); }
-    .sky { fill: #ffffff; }
+    .sky { fill: #c0c2beff; }
     .b { fill: var(--accent); }
     .handL { fill: var(--gold); }
-    .handR { fill: #fff; stroke: var(--text); stroke-width: 1.4; }
+    .handR { fill: #071e22; stroke: var(--text); stroke-width: 1.4; }
     .t1 { fill: var(--text); font-family: 'Poppins', sans-serif; font-size: 34px; font-weight: 700; }
     .t2 { fill: var(--text); font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 500; }
   </style>

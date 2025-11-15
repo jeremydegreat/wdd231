@@ -5,7 +5,7 @@
       "address": "No. 12 Zik Avenue, Awka, Anambra State",
       "phone": "+234 802 123 4567",
       "website": "https://anambratechhub.com",
-      "image": "member1.png",
+      "image": "https://plus.unsplash.com/premium_photo-1729091330557-891d79192863?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "membershipLevel": 3,
       "description": "Leading innovation center fostering digital startups across Anambra."
     },
@@ -14,7 +14,7 @@
       "address": "Plot 22 Aroma Junction, Awka",
       "phone": "+234 806 987 6543",
       "website": "https://goldenpalmhotels.com",
-      "image": "member2.png",
+      "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "membershipLevel": 2,
       "description": "Luxury hospitality service known for premium accommodation and event hosting."
     },
@@ -23,7 +23,7 @@
       "address": "Awka-Onitsha Expressway, Awka",
       "phone": "+234 813 555 3321",
       "website": "https://ezetransport.com",
-      "image": "member3.png",
+      "image": "https://plus.unsplash.com/premium_photo-1661637686969-7fbcea8789ad?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "membershipLevel": 1,
       "description": "Reliable road transport and logistics company serving Southeast Nigeria."
     },
@@ -32,7 +32,7 @@
       "address": "Opp. UNIZIK Junction, Awka",
       "phone": "+234 704 556 7788",
       "website": "https://nnamdidigital.com",
-      "image": "member4.png",
+      "image": "https://images.unsplash.com/photo-1693031630369-bd429a57f115?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "membershipLevel": 2,
       "description": "Professional printing and branding solutions for businesses."
     },
@@ -41,7 +41,7 @@
       "address": "Plot 45 Agulu Road, Awka",
       "phone": "+234 701 222 3344",
       "website": "https://awkaagroventures.com",
-      "image": "member5.png",
+      "image": "https://images.unsplash.com/photo-1714413917704-1c7414c40f33?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "membershipLevel": 3,
       "description": "Empowering local farmers with agricultural tools and processing services."
     },
@@ -50,7 +50,7 @@
       "address": "No. 8 Arthur Eze Avenue, Awka",
       "phone": "+234 805 789 0001",
       "website": "https://sparklemfb.com",
-      "image": "member6.png",
+      "image": "https://images.unsplash.com/photo-1656189368832-43a6dd24f18f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "membershipLevel": 1,
       "description": "Microfinance solutions for SMEs and entrepreneurs in Anambra State."
     },
@@ -59,7 +59,7 @@
       "address": "Suite 17 Eke Awka Plaza, Awka",
       "phone": "+234 810 444 1122",
       "website": "https://unityict.com",
-      "image": "member7.png",
+      "image": "https://images.unsplash.com/photo-1651217098975-9e1aa479093a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "membershipLevel": 2,
       "description": "IT consultancy and web services for business digitization."
     }
