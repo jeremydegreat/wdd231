@@ -256,7 +256,8 @@ img {
 }
 
 .right { 
-    border-top-right-radius: var(--border-radius-sm); border-bottom-left-radius: var(--border-radius-sm);
+    border-top-right-radius: var(--border-radius-sm); 
+    border-bottom-left-radius: var(--border-radius-sm);
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
 }
