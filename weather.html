@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD231 | Local Weather Forecast</title>
+    <meta name="description" content="Live weather forecast for your location using OpenWeatherMap API — part of Web Design and Development II (WDD231).">
+    <meta name="author" content="Chinedu Jeremiah Iloabuchi">
+
+    <!-- Open Graph meta tags (updated for weather context) -->
+    <meta property="og:title" content="WDD231 | Local Weather Forecast">
+    <meta property="og:description" content="Check current weather conditions and 5-day forecast using OpenWeatherMap API. Built for WDD231 at BYU-Idaho.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/weather-preview.webp"> <!-- Consider using a weather-themed preview image -->
+    <meta property="og:url" content="https://jeremydegreat.github.io/wdd231/weather.html"> <!-- Updated URL to match weather page filename -->
+
+    <!-- Google Fonts (keep as is unless you want to reduce bloat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Chango&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/weather.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OpenWeatherMap.org API Test</h1>
+        <main class="weather-card">
+            <h2 id="town"></h2>
+            <p>The current temperature in <span class="town">Trier, Germany</span> is <span id="current-temp"></span></p>
+            <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption id="figcaption"></figcaption>
+            </figure>
+        </main>
+        <footer>
+            Chinedu Jeremiah Iloabuchi | OpenWeatherMap.org | CC BY-SA 4.0
+        </footer>
+    </div>
+
+    <!-- JavaScript Links -->
+    <script src="scripts/weather.js" defer></script>
+</body>
+</html>
