@@ -31,6 +31,7 @@
 
     <!-- JavaScript Links -->
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/homepage.js" defer></script>
 </head>
 <body>
     <!-- header section -->
@@ -52,23 +53,121 @@
         <nav class="navbar">
             <ul class="navlinks">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#directory">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="whitesmoke"><circle cx="12" cy="12" r="9" stroke="black" stroke-width="2"/><path d="M12 3 A9 9 0 0 0 12 21" fill="black"/></svg>
             </ul>
         </nav>
     </header>
 
+    <!-- MAIN SECTION -->
     <main class="main">
-        <div class="view-controls">
-            <button id="gridView" class="view-btn active">Grid View</button>
-            <button id="listView" class="view-btn right">List View</button>
-        </div>
-        <div class="grid-view" id="membersContainer"></div>
+
+        <!-- Hero Section -->
+        <section class="hero-container">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=500&q=80" alt="Business professionals networking at downtown business district">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Welcome to ChamberConnect</h1>
+                <p>Connecting local businesses for growth and success</p>
+                <div class="hero-buttons">
+                    <a href="join.html" class="cta-button">Join the Chamber</a>
+                    <a href="directory.html" class="cta-button">View Directory</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Events/News -->
+        <section class="events-wrapper">
+            <div class="fade-left"></div>
+            <div class="fade-right"></div>
+
+            <div class="event-scroller">
+                <h2>Featured Current Events / News</h2>
+                <div class="event-track">
+
+                    <!-- event-card 1 -->
+                    <div class="event-card">
+                        <span class="date">November 18, 2025</span>
+                        <h3>New Small Business Grant Program Launches</h3>
+                        <p>The Chamber has announced a new $50,000 grant program for small businesses…</p>
+                    </div>
+                    <!-- event-card 2 -->
+                    <div class="event-card">
+                        <span class="date">November 15, 2025</span>
+                        <h3>Holiday Market Registration</h3>
+                        <p>Register your business for the annual Holiday Market happening December 10–12…</p>
+                    </div>
+                    <!-- event-card 3 -->
+                    <div class="event-card">
+                        <span class="date">November 10, 2025</span>
+                        <h3>Chamber Advocacy Success</h3>
+                        <p>The city council has approved additional parking spaces downtown…</p>
+                    </div>
+                    <!-- event-card 4 -->
+                    <div class="event-card">
+                        <span class="date">November 5, 2025</span>
+                        <h3>Business Leadership Seminar</h3>
+                        <p>Join top industry leaders for a full-day workshop on modern leadership skills and digital transformation strategies.</p>
+                    </div>
+                    <!-- event-card 5 -->
+                    <div class="event-card">
+                        <span class="date">November 2, 2025</span>
+                        <h3>Women in Business Networking Night</h3>
+                        <p>A special networking evening celebrating women entrepreneurs in Awka. Open to all professionals.</p>
+                    </div>
+                    <!-- event-card 6 -->
+                    <div class="event-card">
+                        <span class="date">October 28, 2025</span>
+                        <h3>Annual Chamber Awards</h3>
+                        <p>Recognizing outstanding businesses, innovators, and community contributors across Awka.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="spotlight-container">
+            <!-- SPOTLIGHT PART -->
+            <div class="spotlight">
+                <h2>Member Spotlights</h2>
+                <div id="spotlights-container" class="spotlight-track"></div>
+            </div>
+
+            <!-- WEATHER PART -->
+            <div class="weather">
+                <h4>Local weather</h4>
+                <div class="weather-card">
+                    <h2 id="town"></h2>
+                    <p id="current-temp"></p>
+                    <figure>
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption id="figcaption"></figcaption>
+                    </figure>
+                    <div class="forecast" id="forecast-container">
+                        <div class="forecast-day">
+                            <div id="day1-date">--/--</div>
+                            <div id="day1-temp">--°</div>
+                        </div>
+                        <div class="forecast-day">
+                            <div id="day2-date">--/--</div>
+                            <div id="day2-temp">--°</div>
+                        </div>
+                        <div class="forecast-day">
+                            <div id="day3-date">--/--</div>
+                            <div id="day3-temp">--°</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-     <footer class="footer">
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
         <div class="footer-container">
             <div class="logo-container">
                 <img src="images/logoacoc.svg" alt="ACOC logo">

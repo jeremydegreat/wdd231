@@ -11,7 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Last modified
-    lastModified && (lastModified.textContent = `Last modified: ${document.lastModified}`);
+    if (lastModified) {
+        lastModified.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" style="margin-right:8px; vertical-align:middle;">
+                <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 11h4v2h-6V7h2v6z"></path>
+            </svg>
+            Last modified: ${document.lastModified}
+        `;
+    }
+
 
     let membersData = []; // store fetched members
 
