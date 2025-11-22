@@ -1,4 +1,4 @@
-// ...existing code...
+
 document.addEventListener('DOMContentLoaded', () => {
     const lastModified = document.querySelector('#lastmodified');
     const membersContainer = document.getElementById("membersContainer");
@@ -20,10 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-
     let membersData = []; // store fetched members
 
-    // ...existing code...
     // Hamburger Toggle
     const hamburger = document.querySelector('.hamburger');
     const navlinks = document.querySelector('.navlinks');
@@ -52,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.remove('active');
         });
     });
-// ...existing code...
 
     // Fetch members data
     async function fetchMembers() {
