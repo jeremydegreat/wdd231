@@ -155,7 +155,6 @@
         flex-direction: row !important;
     }
 
-
     /* ===================================
             Main section Styles  
     =================================== */
@@ -275,48 +274,48 @@
 
     .courses-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1rem;
         padding: 1.5rem;
     }
 
     .course-card {
-    background-color: var(--section-Bgcolor);
-    border: 2px solid var(--accent-color);
-    border-radius: 15px;
-    padding: 1rem;
-    padding-top: 2.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: var(--section-Bgcolor);
+        border: 2px solid var(--accent-color);
+        border-radius: 15px;
+        padding: 1rem;
+        padding-top: 2.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .course-card.completed {
-    background-color: #E6F9E8; /* light green for completed */
-    border-color: #33A852;
-    position: relative;
+        background-color: #E6F9E8; /* light green for completed */
+        border-color: #33A852;
+        position: relative;
     }
 
     .course-card.completed::after {
-    content: "✔ Course Completed";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #33A852;
-    color: white;
-    padding: 3px 8px;
-    font-size: 0.8rem;
-    border-radius: 5px;
+        content: "✔ Course Completed";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #33A852;
+        color: white;
+        padding: 3px 8px;
+        font-size: 0.8rem;
+        border-radius: 5px;
     }
 
     .total-credits {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding-bottom: 1.5rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-bottom: 1.5rem;
     }
 
     /* =========Socials Styling========= */
@@ -366,6 +365,49 @@
 
     #currentyear {
         color: yellow;
+    }
+}
+
+/* ===================================
+           MODAL Styling
+=================================== */
+/* For tablets and desktops */
+@media (min-width: 768px) {
+    #course-desc-card {
+        width: 450px;
+        padding: 2rem;
+        transform: scale(0.9);
+    }
+
+    #course-desc-card h3 {
+        font-size: 1.4rem;
+    }
+
+    #course-desc-card p {
+        font-size: 1rem;
+    }
+
+    #course-tech span {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #course-desc-card {
+        width: 550px;
+        padding: 2.5rem;
+    }
+
+    #course-desc-card h3 {
+        font-size: 1.6rem;
+    }
+
+    #course-desc-card p {
+        font-size: 1.05rem;
+    }
+
+    #course-tech span {
+        font-size: 0.9rem;
     }
 }
 

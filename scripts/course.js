@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     const courses = [
         {
             subject: 'CSE',
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Web Fundamentals',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
+            description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming...',
             technology: ['HTML', 'CSS'],
             completed: true
         },
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Programming with Functions',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
+            description: 'CSE 111 students become more organized, efficient, and powerful computer programmers...',
             technology: ['Python'],
             completed: true
         },
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Programming with Classes',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
+            description: 'This course will introduce the notion of classes and objects...',
             technology: ['C#'],
             completed: true
         },
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Dynamic Web Fundamentals',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
+            description: 'This course builds on prior experience in Web Fundamentals and programming...',
             technology: ['HTML', 'CSS', 'JavaScript'],
             completed: true
         },
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Frontend Web Development I',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
+            description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming...',
             technology: ['HTML', 'CSS', 'JavaScript'],
             completed: false
         }
@@ -69,23 +70,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const wddBtn = document.getElementById('wdd');
     const cseBtn = document.getElementById('cse');
 
-    // === Function to Display Courses ===
+    // === Modal Elements ===
+    const modal = document.getElementById("course-desc-card");
+    const subject = document.getElementById("course-subject");
+    const title = document.getElementById("course-title");
+    const credit = document.getElementById("course-credit");
+    const desc = document.getElementById("course-desc");
+    const tech = document.getElementById("course-tech");
+    const closeBtn = document.getElementById("close-modal");
+
+    // === Display Courses Function ===
     function displayCourses(filteredCourses) {
-        courseContainer.innerHTML = ''; // clear old content
+        courseContainer.innerHTML = ''; // Clear container
 
         filteredCourses.forEach(course => {
             const card = document.createElement('div');
             card.classList.add('course-card');
             if (course.completed) card.classList.add('completed');
 
+            // Attach details
+            card.dataset.subject = `${course.subject} ${course.number}`;
+            card.dataset.title = course.title;
+            card.dataset.credit = course.credits;
+            card.dataset.desc = course.description;
+            card.dataset.tech = course.technology.join(', ');
+
+            // Card UI
             card.innerHTML = `
                 <h3>${course.subject} ${course.number}: ${course.title}</h3>
-                <p><strong>Certificate:</strong> ${course.certificate}</p>
-                <p>${course.description}</p>
-                <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
                 <p><strong>Credits:</strong> ${course.credits}</p>
             `;
             courseContainer.appendChild(card);
+
+            // Open modal on click
+            card.addEventListener("click", () => {
+                subject.textContent = card.dataset.subject;
+                title.textContent = card.dataset.title;
+                credit.textContent = "Credit: " + card.dataset.credit;
+                desc.textContent = card.dataset.desc;
+                tech.textContent = "Tech Focus: " + card.dataset.tech;
+                modal.showModal();
+            });
         });
 
         // Update total credits
@@ -93,21 +118,19 @@ document.addEventListener('DOMContentLoaded', () => {
         totalCreditsDisplay.textContent = `Total Credits: ${totalCredits}`;
     }
 
-    // === Event Listeners for Buttons ===
-    allBtn.addEventListener('click', () => {
-        displayCourses(courses);
+    // === Modal Close Behavior ===
+    closeBtn.onclick = () => modal.close();
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.close();
     });
+    modal.addEventListener("cancel", () => modal.close());
 
-    wddBtn.addEventListener('click', () => {
-        const wddCourses = courses.filter(course => course.subject === 'WDD');
-        displayCourses(wddCourses);
-    });
+    // === Filter Button Events ===
+    allBtn.addEventListener('click', () => displayCourses(courses));
+    wddBtn.addEventListener('click', () => displayCourses(courses.filter(c => c.subject === 'WDD')));
+    cseBtn.addEventListener('click', () => displayCourses(courses.filter(c => c.subject === 'CSE')));
 
-    cseBtn.addEventListener('click', () => {
-        const cseCourses = courses.filter(course => course.subject === 'CSE');
-        displayCourses(cseCourses);
-    });
-
-    // === Default Display ===
+    // === Default View ===
     displayCourses(courses);
+
 });

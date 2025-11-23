@@ -386,7 +386,7 @@ img {
         transform: translateX(5%);
     }
     100% {
-        transform: translateX(-5%);
+        transform: translateX(-3%);
     }
 }
 
@@ -411,7 +411,7 @@ img {
 
 .event-card .date {
     font-size: 0.9rem;
-    color: #555;
+    color: #111;
     margin-bottom: 10px;
     font-weight: 500;
 }
@@ -424,7 +424,7 @@ img {
 
 .event-card p {
     font-size: 0.95rem;
-    color: #333;
+    color: #111;
     margin-bottom: 15px;
     line-height: 1.4;
 }
@@ -479,8 +479,9 @@ img {
 }
 
 .spotlight-card {
+    color: var(--whitesmoke);
     max-width: 300px;
-    background: rgba(161, 142, 142, 0.25);
+    background: rgba(193, 193, 193, 0.25);
     border: 2px solid var(--accent1-color);
     padding: 15px;
     box-shadow: 0 4px 17px rgba(0,0,0,0.08);
@@ -526,7 +527,7 @@ img {
     font-size: 1.7rem;
     font-weight: 700;
     text-align: center;
-    color: #01061A;
+    color: var(--footerbg-text);
 }
 
 /* Current temperature */
@@ -535,7 +536,7 @@ img {
     font-size: 2.4rem;
     font-weight: 600;
     text-align: center;
-    color: #0E2B5F;
+    color: var(--footerbg-text);
 }
 
 /* Weather icon */
@@ -556,7 +557,8 @@ img {
 #figcaption {
     margin-top: 4px;
     font-size: 0.9rem;
-    color: #333;
+    font-weight: 500;
+    color: var(--bodybg-color);
 }
 
 /* Forecast Section */
@@ -570,7 +572,7 @@ img {
 
 .forecast-day {
     flex: 1;
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.15);
     padding: 10px;
     text-align: center;
     border-radius: 12px;
@@ -580,7 +582,7 @@ img {
 /* Forecast date */
 .forecast-day div:first-child {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--bodybg-color);
     margin-bottom: 4px;
 }
 
@@ -588,7 +590,7 @@ img {
 .forecast-day div:last-child {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #0E2B5F;
+    color: var(--bodybg-color);
 }
 
 /* ==============DIRECTORY PAGE CSS STYLING=============== */
