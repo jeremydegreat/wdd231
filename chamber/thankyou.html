@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Awka Chamber of Commerce</title>
+    <meta name="description" content="Thank you for joining the Awka Chamber of Commerce. Here is the information you submitted.">
+    <meta name="author" content="Chinedu Jeremiah Iloabuchi">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #111;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #01061A;
+            color: #dcf763;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: rgba(0,0,0,0.4);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(43, 255, 0, 0.5);
+        }
+        h1 {
+            color: whitesmoke;
+            text-align: center;
+        }
+        p {
+            color: whitesmoke;
+        }
+        .submitted-info {
+            margin-top: 1.5rem;
+        }
+        .submitted-info p {
+            color: whitesmoke;
+            font-size: 1.1rem;
+            margin: 0.8rem 0;
+        }
+        .submitted-info strong {
+            color: #8fa23b;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Awka Chamber of Commerce</h2>
+</header>
+
+<main>
+    <h1>Thank You for Joining!</h1>
+    <p>We appreciate your submission. Here is the information you provided:</p>
+
+    <div class="submitted-info" id="submitted-info">
+        <!-- JavaScript will populate this section -->
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Awka Chamber of Commerce</p>
+</footer>
+
+<script>
+    // Function to get URL parameters
+    function getFormData() {
+        const params = new URLSearchParams(window.location.search);
+        const info = {
+            'First Name': params.get('fname') || '',
+            'Last Name': params.get('lname') || '',
+            'Email': params.get('email') || '',
+            'Phone': params.get('phone') || '',
+            'Organization Name': params.get('organization') || '',
+            'Organizational Title': params.get('title') || '',
+            'Membership Level': params.get('membership-level') || '',
+            'Organization Description': params.get('org-description') || ''
+        };
+        return info;
+    }
+
+    // Display the form data
+    const infoContainer = document.getElementById('submitted-info');
+    const formData = getFormData();
+    for (const [key, value] of Object.entries(formData)) {
+        const p = document.createElement('p');
+        p.innerHTML = `<strong>${key}:</strong> ${value}`;
+        infoContainer.appendChild(p);
+    }
+</script>
+
+</body>
+</html>

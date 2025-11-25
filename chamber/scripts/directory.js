@@ -143,4 +143,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch on load
     fetchMembers();
+
+     /* ========== SELECT ELEMENTS ========== */
+    const memberButtons = document.querySelectorAll(".membership-card button");
+    const dialogs = document.querySelectorAll("dialog");
+    const closeButtons = document.querySelectorAll(".close-dialog");
+
+
+    /* ========== OPEN DIALOG ========== */
+    memberButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modalName = button.getAttribute("data-modal").replace("modal", "dialog");
+            const dialog = document.getElementById(modalName);
+
+            if (dialog) {
+                dialog.showModal();
+            }
+        });
+    });
+
+
+    /* ========== CLOSE MODAL WITH X BUTTON ========== */
+    closeButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const dialog = btn.closest("dialog");
+            dialog.close();
+        });
+    });
+
+
+    /* ========== CLOSE MODAL BY CLICKING OUTSIDE ========== */
+    dialogs.forEach(dialog => {
+        dialog.addEventListener("click", (event) => {
+            const dialogRect = dialog.getBoundingClientRect();
+
+            // If user clicks outside the content box → close the modal
+            if (
+                event.clientX < dialogRect.left ||
+                event.clientX > dialogRect.right ||
+                event.clientY < dialogRect.top ||
+                event.clientY > dialogRect.bottom
+            ) {
+                dialog.close();
+            }
+        });
+    });
+
+
 });

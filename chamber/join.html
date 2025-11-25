@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory</title>
+    <meta name="description" content="Explore the demo business directory of the Awka Chamber of Commerce — connecting local enterprises, startups, and investors in Anambra State.">
+    <meta name="author" content="Chinedu Jeremiah Iloabuchi">
+
+    <!-- Open graph meta tags -->
+    <meta property="og:title" content="WDD231 | Awka Chamber Of Commerce">
+    <meta property="og:description" content="Discover trusted businesses and organizations across Awka, Anambra State, through our official Chamber of Commerce directory.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/awkachamberofcommerce.webp">
+    <meta property="og:url" content="https://Jeremydegreat.github.io/wdd231/chamber/directory.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Chango&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Css Links -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+
+    <!-- JavaScript Links -->
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/homepage.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <!-- header section -->
+    <header class="header">
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logoacoc.svg" alt="Awka chamber of commerce official logo">
+        </div>
+
+        <div class="svg-icons"></div>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="navlinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <span class="nav-svg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="whitesmoke"><circle cx="12" cy="12" r="9" stroke="black" stroke-width="2"/><path d="M12 3 A9 9 0 0 0 12 21" fill="black"/></svg>
+        </span>
+
+        <!-- Hamburger -->
+        <button class="hamburger" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="join-container">
+        <form action="thankyou.html" method="get" class="form-container">
+            <fieldset>
+                <legend>Join Us</legend>
+
+                <!-- First Name -->
+                <label>
+                    First Name:
+                    <input 
+                        type="text" 
+                        name="fname" 
+                        title="first name" 
+                        placeholder="Enter your first name" 
+                        aria-label="first name" 
+                        autocomplete="given-name" 
+                        required>
+                </label>
+
+                <!-- Last Name -->
+                <label>
+                    Last Name:
+                    <input 
+                        type="text" 
+                        name="lname" 
+                        title="last name" 
+                        placeholder="Enter your last name" 
+                        aria-label="last name" 
+                        autocomplete="family-name" 
+                        required>
+                </label>
+
+                <!-- Organizational Title -->
+                <label>
+                    Organization-Title:
+                    <input 
+                        type="text" 
+                        name="title" 
+                        title="Enter your organizational title (letters, hyphens, spaces, minimum 7 characters)" 
+                        pattern="[A-Za-z\s\-]{7,}" 
+                        aria-label="Organizational Title" 
+                        autocomplete="organization-title" 
+                        required>
+                </label>
+
+                <!-- Email -->
+                <label>
+                    Email:
+                    <input 
+                        type="email" 
+                        name="email" 
+                        title="Email" 
+                        placeholder="example@domain.com" 
+                        aria-label="Email Address" 
+                        autocomplete="email" 
+                        required>
+                </label>
+
+                <!-- Phone Number -->
+                <label>
+                    Phone Number:
+                    <input 
+                        type="tel" 
+                        name="phone" 
+                        title="Phone" 
+                        placeholder="+234 567 566 7567" 
+                        aria-label="Mobile Phone Number" 
+                        autocomplete="tel-country-code" 
+                        required>
+                </label>
+
+                <!-- Organization Name -->
+                <label>
+                    Organization Name:
+                    <input 
+                        type="text" 
+                        name="organization" 
+                        title="Organization" 
+                        placeholder="Enter your organization name" 
+                        aria-label="Organization Name" 
+                        autocomplete="organization" 
+                        required>
+                </label>
+
+                <!-- Membership Level -->
+                <label>
+                    Select Membership Level:
+                    <select 
+                        name="membership-level" 
+                        title="Choose your membership level" 
+                        required 
+                        aria-label="Membership Level">
+                        <option value="" disabled selected>Select a membership level</option>
+                        <option value="np">NP Membership (Non-profit, no fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <!-- Organization Description -->
+                <label>
+                    Business/Organization Description:
+                    <textarea 
+                        name="org-description" 
+                        title="Enter a brief description of your business or organization"
+                        rows="5"
+                        placeholder="Describe your organization..."></textarea>
+                </label>
+
+                <!-- Timestamp (hidden) -->
+                <input 
+                    type="hidden" 
+                    name="timestamp" 
+                    value="<?php echo date('Y-m-d H:i:s'); ?>">
+
+                <!-- Form Submission Button -->
+                <label>
+                    <input 
+                        type="submit" 
+                        value="Submit Application" 
+                        aria-label="Submit Membership Application">
+                </label>
+
+            </fieldset>
+        </form>
+
+        <!-- Membership Cards -->
+        <div class="membership-cards">
+            <div class="membership-card">
+                <h3>NP Membership</h3>
+                <p>Non-profit organizations, no fee</p>
+                <button data-modal="modal-np">More Info</button>
+            </div>
+            <div class="membership-card">
+                <h3>Bronze Membership</h3>
+                <p>Basic benefits for small organizations</p>
+                <button data-modal="modal-bronze">More Info</button>
+            </div>
+            <div class="membership-card">
+                <h3>Silver Membership</h3>
+                <p>Advanced benefits and event discounts</p>
+                <button data-modal="modal-silver">More Info</button>
+            </div>
+            <div class="membership-card">
+                <h3>Gold Membership</h3>
+                <p>Premium benefits including spotlight ads</p>
+                <button data-modal="modal-gold">More Info</button>
+            </div>
+        </div>
+
+        <!-- Dialogs -->
+        <dialog id="modal-np">
+            <button class="close-dialog">&times;</button>
+            <h3>NP Membership Benefits</h3>
+            <ul>
+                <li>Participation in community events</li>
+                <li>No membership fee</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <button class="close-dialog">&times;</button>
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li>Basic event access</li>
+                <li>Limited advertising on website</li>
+                <li class="price-tag"><strong>Price:</strong> &#8358;10,000</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-silver">
+            <button class="close-dialog">&times;</button>
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Discounted training sessions</li>
+                <li>Featured on events page</li>
+                <li class="price-tag"><strong>Price:</strong> &#8358;20,000</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-gold">
+            <button class="close-dialog">&times;</button>
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Spotlight ads on home page</li>
+                <li>Exclusive networking events</li>
+                <li class="price-tag"><strong>Price:</strong> &#8358;30,000</li>
+            </ul>
+        </dialog>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo-container">
+                <img src="images/logoacoc.svg" alt="ACOC logo">
+            </div>
+            <div class="footer-content">
+                <div class="footer-address">
+                    <h4>Awka Chamber Of Commerce Awka, Anambra state.</h4>
+                    <p>
+                        <svg width="18" height="18" fill="currentColor">
+                            <path d="M12 2C8.7 2 6 4.7 6 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.3-2.7-6-6-6zm0 8.5c-1.4 0-2.5-1.12-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.1 2.5-2.5 2.5z"/>
+                        </svg>
+                        No 5 Chief Pius Mbanusi Okpuno
+                    </p>
+                    <p>
+                        <svg width="18" height="18" fill="currentColor">
+                            <path d="M3 13h18v2H3v-2zm3-8h2v6H6V5zm4-3h2v9h-2V2zm4 5h2v4h-2V7z"/>
+                        </svg>
+                        Awka, Anambra state.
+                    </p>
+
+                    <p>
+                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
+                            <path d="M2 4h20v16H2V4zm10 7l10-6H2l10 6zm0 2L2 6v12h20V6l-10 7z"/>
+                        </svg>
+                        support@awkachamberofcommerce.org
+                    </p>
+
+                    <p>
+                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
+                            <path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.9-1.9c.3-.3.8-.4 1.1-.2 1.2.4 2.6.7 3.9.7.6 0 1 .4 1 1v3.1c0 .6-.4 1-1 1C10.3 20.1 1.9 11.7 1.9 1c0-.6.4-1 1-1H6c.6 0 1 .4 1 1 0 1.3.2 2.7.7 3.9.1.4 0 .8-.2 1.1l-1.9 1.8z"/>
+                        </svg>
+                        +23483389340
+                    </p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M523.4 215.7C523.7 220.2 523.7 224.8 523.7 229.3C523.7 368 418.1 527.9 225.1 527.9C165.6 527.9 110.4 510.7 64 480.8C72.4 481.8 80.6 482.1 89.3 482.1C138.4 482.1 183.5 465.5 219.6 437.3C173.5 436.3 134.8 406.1 121.5 364.5C128 365.5 134.5 366.1 141.3 366.1C150.7 366.1 160.1 364.8 168.9 362.5C120.8 352.8 84.8 310.5 84.8 259.5L84.8 258.2C98.8 266 115 270.9 132.2 271.5C103.9 252.7 85.4 220.5 85.4 184.1C85.4 164.6 90.6 146.7 99.7 131.1C151.4 194.8 229 236.4 316.1 240.9C314.5 233.1 313.5 225 313.5 216.9C313.5 159.1 360.3 112 418.4 112C448.6 112 475.9 124.7 495.1 145.1C518.8 140.6 541.6 131.8 561.7 119.8C553.9 144.2 537.3 164.6 515.6 177.6C536.7 175.3 557.2 169.5 576 161.4C561.7 182.2 543.8 200.7 523.4 215.7z"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z"/></svg></a>
+                </div>
+                <div class="footer-copyright">
+                    <h4>WDD231 Class Project</h4>
+                    <p>
+                        <!-- Person Icon -->
+                        <svg width="18" height="18" fill="currentColor">
+                            <path d="M12 12c2.7 0 8 1.3 8 4v2H4v-2c0-2.7 5.3-4 8-4zm0-2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 
+                            1.8 4 4-1.8 4-4 4z"/>
+                        </svg>
+                        Chinedu Jeremiah Iloabuchi
+                    </p>
+
+                    <p>
+                        <!-- Copyright Icon -->
+                        <svg width="18" height="18" fill="currentColor">
+                            <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18c-4.4 
+                            0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 
+                            8zm0-13a5 5 0 100 10 5 5 0 000-10zm0 
+                            8c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.1 0 2 
+                            .6 2.5 1.5l1.7-1A5 5 0 0012 5a5 5 0 000 
+                            10c1.8 0 3.4-1 4.2-2.5l-1.7-1A3 3 0 0112 
+                            15z"/>
+                        </svg>
+                        © 2025 Awka Chamber Of Commerce
+                    </p>
+
+                    <p id="lastmodified"></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

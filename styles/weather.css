@@ -23,6 +23,12 @@ body {
   max-width: 500px;
   width: 90%;
   text-align: center;
+  transition: width 0.05s ease-in height 0.05 ease-out;
+}
+
+.container:hover {
+  width: 500px;
+  height: 400px;
 }
 
 h1 {
