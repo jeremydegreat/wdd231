@@ -1,0 +1,93 @@
+/* ---------- COLOR SCHEME ---------- */
+        :root{
+            --teal:#00796B;      /* headings, buttons, accents */
+            --cream:#FFF8E1;     /* background, alternate rows */
+            --charcoal:#212121;  /* body text */
+            --white:#FFFFFF;     /* card backgrounds */
+        }
+
+        /* ---------- TYPOGRAPHY ---------- */
+        body{
+            font-family:'Open Sans', sans-serif;
+            color:var(--charcoal);
+            background:var(--cream);
+            margin:0;
+            line-height:1.6;
+        }
+        h1,h2,h3{
+            font-family:'Poppins', sans-serif;
+            color:var(--teal);
+            margin-top:0;
+        }
+        code{
+            font-family:monospace;
+            background:#e0e0e0;
+            padding:2px 4px;
+            border-radius:3px;
+        }
+
+        /* ---------- LAYOUT ---------- */
+        header{
+            background:var(--teal);
+            color:var(--white);
+            padding:1.5rem 1rem;
+            text-align:center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--white);
+        }
+        section{
+            max-width:900px;
+            margin:2rem auto;
+            padding:1.5rem;
+            background:var(--white);
+            border-radius:8px;
+            box-shadow:0 2px 6px rgba(0,0,0,.08);
+        }
+        .grid{
+            display:grid;
+            gap:1rem;
+            grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+        }
+        .color-box{
+            padding:1rem;
+            border-radius:4px;
+            color:#fff;
+            text-align:center;
+            font-weight:bold;
+        }
+        .teal-bg{background:var(--teal);}
+        .cream-bg{background:var(--cream); color:var(--charcoal);}
+        .charcoal-bg{background:var(--charcoal);}
+
+        /* ---------- WIREFRAME SKETCHES ---------- */
+        .wireframe{
+            border:2px dashed var(--teal);
+            padding:1rem;
+            margin-top:1rem;
+            background:#fafafa;
+        }
+        .wireframe h4{
+            margin-top:0;
+        }
+        .mobile, .desktop{
+            display:flex;
+            flex-direction:column;
+            gap:.5rem;
+        }
+        .desktop{
+            flex-direction:row;
+            flex-wrap:wrap;
+        }
+        .block{
+            background:var(--teal);
+            color:#fff;
+            padding:.75rem;
+            border-radius:4px;
+            text-align:center;
+            font-size:.85rem;
+        }
+        .mobile .block{flex:1 1 100%;}
+        .desktop .block{flex:1 1 30%;}
