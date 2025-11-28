@@ -967,6 +967,174 @@ dialog ul {
 /* ================================
    FOOTER STYLING 
 ================================== */
+.discover-container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 1rem; 
+}
+
+.discover-hero { 
+    text-align: left; 
+    margin: 1.5rem 0; 
+}
+
+.discover-hero h1 { 
+    color: var(--accent1-color);
+    font-size: 2rem; 
+    margin-bottom: .25rem; 
+}
+
+.discover-hero p { 
+    color: var(--whitesmoke);
+    margin-bottom: 1.5rem; 
+}
+
+.visit-message { 
+    background: #fff8c4; 
+    border-left: 4px solid #f0c419; 
+    padding: .5rem .75rem; 
+    margin-top: .5rem; 
+    border-radius: 4px; 
+    font-weight: 600; 
+}
+
+/* Discover grid container */
+.discover-content { margin-top: 1.25rem; }
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+
+  /* small screen default: single column */
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 0.8rem .8rem .8rem 1.5rem;
+  box-shadow: 0 1px 5px rgba(2,6,23,0.06);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: .5rem;
+}
+
+.card-title { 
+    font-size: 1.25rem; 
+    margin: 0; 
+    color: #062040; 
+}
+
+.card-figure { 
+    margin: 0; 
+    overflow: hidden; 
+    border-radius: 6px; 
+}
+
+.card-figure img { 
+    width: 100%; 
+    height: 100%;
+    display:block; 
+    max-width:300px; 
+    max-height:200px; 
+    object-fit:cover; 
+    margin-top: 1rem;
+}
+
+/* address and description */
+.card-address { font-style: normal; color: #666; font-size: .9rem; margin: 0; }
+.card-desc { margin-top: .35rem; color: #333; font-size: .95rem; }
+
+/* actions */
+.card-actions { margin-top: .35rem; }
+.learn-btn {
+  background: #0e5aa7;
+  color: white;
+  border: none;
+  padding: .45rem .65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight:600;
+}
+.learn-btn:hover { filter: brightness(.95); }
+
+/* Named grid areas for medium and large screens:
+   I'll explicitly assign each card to an area to satisfy requirement of named areas.
+   We'll use nth-child to map items onto named areas.
+*/
+.discover-grid > .card:nth-child(1) { grid-area: c1; }
+.discover-grid > .card:nth-child(2) { grid-area: c2; }
+.discover-grid > .card:nth-child(3) { grid-area: c3; }
+.discover-grid > .card:nth-child(4) { grid-area: c4; }
+.discover-grid > .card:nth-child(5) { grid-area: c5; }
+.discover-grid > .card:nth-child(6) { grid-area: c6; }
+.discover-grid > .card:nth-child(7) { grid-area: c7; }
+.discover-grid > .card:nth-child(8) { grid-area: c8; }
+
+/* MEDIUM: 2 columns (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "c5 c6"
+      "c7 c8";
+  }
+  .card-figure img { max-width:100%; height:auto; }
+}
+
+/* LARGE: 4 columns (1025px and up) */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "c1 c2 c3 c4"
+      "c5 c6 c7 c8";
+  }
+  .card { padding: .9rem; }
+  .card-figure img { width:100%; height:160px; object-fit:cover; }
+}
+
+/* Hover image effect only on pointer-capable devices (not mobile) */
+@media (hover: hover) and (pointer: fine) {
+  .card-figure img {
+    transition: transform 250ms ease, box-shadow 250ms ease;
+  }
+  .card-figure img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.12);
+  }
+}
+
+/* small helper for screen-reader only */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+
+
+/* ================================
+   FOOTER STYLING 
+================================== */
 footer {
     padding: 2rem 1.5rem;
     background-color: var(--footerbg-color);
