@@ -124,26 +124,32 @@ async function loadSpotlights() {
         const shuffled = goldSilver.sort(() => 0.5 - Math.random());
 
         // PICK UP TO 3 MEMBERS
-        const selectedCount = Math.min(3, shuffled.length); // ensure we don't exceed available members
+        const selectedCount = Math.min(3, shuffled.length);
         const selected = shuffled.slice(0, selectedCount);
 
         const container = document.getElementById("spotlights-container");
-        container.innerHTML = ""; // clear old content
+        container.innerHTML = "";
 
         selected.forEach(member => {
             const card = document.createElement("div");
             card.classList.add("spotlight-card");
 
-            card.innerHTML = `
-                <img src="${member.image}" alt="${member.name}">
-                <h3>${member.name}</h3>
-                <p><strong>Phone:</strong> ${member.phone}</p>
-                <p><strong>Address:</strong> ${member.address}</p>
-                <p><a href="${member.website}" target="_blank">Visit Website →</a></p>
-                <p class="level ${member.membershipLevel === 3 ? "gold" : "silver"}">
-                    ${member.membershipLevel === 3 ? "Gold Member" : "Silver Member"}
-                </p>
+           card.innerHTML = `
+                <div class="card-img-wrapper">
+                    <img src="${member.image}" alt="${member.name}">
+                </div>
+
+                <div class="card-body">
+                    <h3>${member.name}</h3>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><a href="${member.website}" target="_blank">Visit Website →</a></p>
+                    <p class="level ${member.membershipLevel === 3 ? "gold" : "silver"}">
+                        ${member.membershipLevel === 3 ? "Gold Member" : "Silver Member"}
+                    </p>
+                </div>
             `;
+
 
             container.appendChild(card);
         });

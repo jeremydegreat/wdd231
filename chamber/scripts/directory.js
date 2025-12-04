@@ -42,6 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // CHANGE OD COLOR ON-SCROLL
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+
+        if (window.scrollY > 10) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+
     // Close navlinks when clicking a nav link
     const navItems = document.querySelectorAll('.navlinks li a');
     navItems.forEach((item) => {
@@ -114,8 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${member.name}</td>
-                <td>${member.address || ''}</td>
-                <td>${member.phone || ''}</td>
+                <td class="col-address">${member.address || ''}</td>
+                <td class="col-phone">${member.phone || ''}</td>
                 <td>${member.website ? `<a href="${member.website}" target="_blank" rel="noopener">${member.website}</a>` : ''}</td>
             `;
             tbody.appendChild(tr);
