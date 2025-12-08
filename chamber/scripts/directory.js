@@ -1,12 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const lastModified = document.querySelector('#lastmodified');
-    const membersContainer = document.getElementById("membersContainer");
+    const membersContainer = document.getElementById("memberscontainer");
     const gridViewBtn = document.getElementById("gridView");
     const listViewBtn = document.getElementById("listView");
 
     if (!membersContainer) {
-        console.error('Members container not found. Add an element with id="membersContainer" in directory.html');
+        console.warn('memberscontainer not found on this page — script skipped.');
         return;
     }
 

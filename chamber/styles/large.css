@@ -527,7 +527,7 @@
         max-width: 800px;
     }
     /* ================================
-    DISCOVER PAGE MOBILEVIEW STYLING 
+    DISCOVER PAGE LARGE STYLING 
     ================================== */
     .discover-container {
         max-width: 1600px;
@@ -545,7 +545,7 @@
     }
     .card {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 300px 1fr;
         grid-template-rows: auto;
         grid-template-areas:
         "img title"
@@ -554,11 +554,15 @@
         "img actions";
         gap: .7rem 1rem;
         align-items: start;
+        width: 100%;
+        max-width: 750px;
+        min-height: 200px;
     }
 
     .card-figure {
         grid-area: img;
-        width: 300px;
+        max-width: 300px;
+        aspect-ratio: 4 / 3;
     }
 
     .card-title {
@@ -583,7 +587,6 @@
         object-fit: cover;
         max-width: none;
         max-height: none;
-        border-radius: 8px;
     }
     .learn-btn:hover { filter: brightness(.95); }
 
@@ -610,7 +613,7 @@
     /* CONTENT WRAPPER */
     .footer-content {
         display: grid;
-        grid-template-columns: 530px 1fr 300px 1fr;
+        grid-template-columns: 500px 1fr 300px 1fr;
         gap: 2rem;
     }
     .footer-address {
@@ -639,7 +642,7 @@
     /* SOCIAL LINKS */
     .footer-socials {
         display: flex;
-        gap: 0.8rem;
+        gap: 0.5rem;
         flex-wrap: wrap;
     }
 

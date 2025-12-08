@@ -1,0 +1,23 @@
+/* =====================================================================
+   DESKTOP (≥1024px)
+===================================================================== */
+@media (min-width: 1024px) {
+
+    header { padding: 1.5rem 3rem; }
+    .hamburger { display: none; }
+
+    .nav-menu {
+        display: flex !important;
+        flex-direction: row;
+        gap: 2rem;
+        background: none;
+        padding: 0;
+    }
+
+    .hero { padding: 4rem 1rem; }
+    .hero h1 { font-size: 3rem; }
+
+    .opportunities-grid { grid-template-columns: repeat(3,1fr); }
+
+    .tab-section { max-width: 1000px; margin: auto; }
+}

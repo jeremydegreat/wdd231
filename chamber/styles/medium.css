@@ -525,29 +525,13 @@
         max-width: 600px;
     }
     /* ================================
-    DISCOVER PAGE MOBILEVIEW STYLING 
+    DISCOVER PAGE MEDIUM STYLING 
     ================================== */
-    .discover-grid {
-        display: grid;
-        gap: 1rem;
-        align-items: start;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "c1"
-            "c2"
-            "c3"
-            "c4"
-            "c5"
-            "c6"
-            "c7"
-            "c8";
-    }
-
     /* Card */
     .card {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
         "img title"
         "img address"
@@ -555,37 +539,20 @@
         "img actions";
         gap: .7rem 1rem;
         align-items: start;
+        min-height: 260px;
+        max-width: 750px;
     }
 
     .card-figure {
         grid-area: img;
-        width: 300px;
+        max-width: 300px;
+        aspect-ratio: 4 / 3;
     }
 
-    .card-title {
-        grid-area: title;
-    }
-
-    .card-address {
-        grid-area: address;
-    }
-
-    .card-desc {
-        grid-area: desc;
-    }
-
-    .card-actions {
-        grid-area: actions;
-    }
-
-    .card-figure img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        max-width: none;
-        max-height: none;
-        border-radius: 8px;
-    }
+    .card-title   { grid-area: title; }
+    .card-address { grid-area: address; }
+    .card-desc    { grid-area: desc; }
+    .card-actions { grid-area: actions; }
     .learn-btn:hover { filter: brightness(.95); }
 
 
@@ -595,23 +562,18 @@
     footer {
         padding: 2rem 1rem;
     }
-    .footer-container {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
     /* LOGO */
     .logo-container {
         position: absolute;
         top: 35%;
         left: 40%;
-        max-width: 250px;
+        max-width: 200px;
     }
     /* CONTENT WRAPPER */
     .footer-content {
         display: grid;
-        grid-template-columns: 350px 1fr 300px;
-        gap: 2rem;
+        grid-template-columns: 300px 1fr 300px;
+        gap: 1rem;
     }
     .footer-address {
         margin: 0;
@@ -644,8 +606,10 @@
     }
 
     .footer-socials svg {
-        width: 60px;
-        height: 60px;
+        width: 100%;
+        height: 100%;
+        max-width: 60px;
+        max-height: 60px;
         padding: 0.5rem;
         background-color: var(--accent1-color);
         border-radius: 10px;

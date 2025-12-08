@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Anambra Jobs & Skills Hub</title>
+    <meta name="description" content="Get in touch with Anambra Jobs & Skills Hub. Contact our team for support, partnerships, or career guidance.">
+    <meta name="author" content="Anambra Jobs & Skills Hub">
+    <meta name="keywords" content="contact, support, career guidance, partnerships, Anambra jobs">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - Anambra Jobs & Skills Hub">
+    <meta property="og:description" content="Get in touch with Anambra Jobs & Skills Hub for support and career guidance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anambrajobs.com/contact.html">
+    <meta property="og:image" content="./assets/hero-image.png">
+    <meta property="og:site_name" content="Anambra Jobs & Skills Hub">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - Anambra Jobs & Skills Hub">
+    <meta name="twitter:description" content="Get in touch with Anambra Jobs & Skills Hub for support and career guidance.">
+    <meta name="twitter:image" content="./assets/hero-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <style>
+        /* Additional styles for contact page */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--accent-gold) 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            margin-top: 4rem;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .contact-info-section h3 {
+            color: var(--primary-teal);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--primary-teal);
+        }
+
+        .contact-details h4 {
+            color: var(--charcoal-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p {
+            color: var(--charcoal-text);
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .contact-form-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .contact-form-section h3 {
+            color: var(--primary-teal);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal-text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color var(--transition-fast);
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group select.form-control {
+            cursor: pointer;
+        }
+
+        .success-message {
+            background: #E8F5E8;
+            color: #2E7D32;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .office-hours {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .office-hours h4 {
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .hours-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 8px;
+        }
+
+        .hours-item h5 {
+            color: var(--primary-teal);
+            margin-bottom: 0.5rem;
+        }
+
+        .hours-item p {
+            color: var(--charcoal-text);
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">Anambra Jobs Hub</a>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span>☰</span>
+            </button>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1>Contact Us</h1>
+            <p style="font-size: 1.125rem; opacity: 0.9; margin-top: 1rem;">
+                Get in touch with our team for support, partnerships, or career guidance. We're here to help you succeed.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <h3>Get in Touch</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Office Location</h4>
+                            <p>Solution Innovation District<br>Awka, Anambra State<br>Nigeria</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone Support</h4>
+                            <p>+234 703 123 4567<br>+234 802 987 6543</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email Support</h4>
+                            <p>info@anambrajobs.com<br>support@anambrajobs.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h4>Live Chat</h4>
+                            <p>Available on website<br>Mon-Fri: 8AM-6PM</p>
+                        </div>
+                    </div>
+
+                    <div class="office-hours">
+                        <h4>Office Hours</h4>
+                        <div class="hours-grid">
+                            <div class="hours-item">
+                                <h5>Monday - Friday</h5>
+                                <p>8:00 AM - 6:00 PM</p>
+                            </div>
+                            <div class="hours-item">
+                                <h5>Saturday</h5>
+                                <p>10:00 AM - 4:00 PM</p>
+                            </div>
+                            <div class="hours-item">
+                                <h5>Sunday</h5>
+                                <p>Closed</p>
+                            </div>
+                            <div class="hours-item">
+                                <h5>Public Holidays</h5>
+                                <p>Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h3>Send us a Message</h3>
+                    
+                    <!-- Success Message -->
+                    <div id="success-message" class="success-message">
+                        <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you within 24 hours.
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Inquiry Category *</label>
+                            <select id="category" name="category" class="form-control" required>
+                                <option value="">Select a category</option>
+                                <option value="job-support">Job Search Support</option>
+                                <option value="training">Training Programs</option>
+                                <option value="career-counseling">Career Counseling</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" class="form-control" required placeholder="Please describe how we can help you..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Connected</h2>
+            <p>Subscribe to our newsletter for the latest job opportunities and career tips</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-secondary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Anambra Jobs & Skills Hub. Empowering Anambra youths through opportunities.</p>
+            <p>
+                <a href="attributions.html">Attributions</a> | 
+                Built with ❤️ for Anambra State
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="main.js"></script>
+    <script>
+        // Initialize contact page
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeContactForm();
+            initializeNewsletterForm();
+        });
+
+        // Contact form handling
+        function initializeContactForm() {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Validate form
+                if (validateContactForm(data)) {
+                    submitContactForm(data);
+                }
+            });
+
+            // Real-time validation
+            const inputs = contactForm.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    validateField(this);
+                });
+            });
+        }
+
+        // Validate contact form
+        function validateContactForm(data) {
+            const required = ['firstName', 'lastName', 'email', 'category', 'subject', 'message'];
+            let isValid = true;
+
+            required.forEach(field => {
+                const input = document.getElementById(field);
+                if (!data[field] || data[field].trim() === '') {
+                    showFieldError(input, 'This field is required');
+                    isValid = false;
+                } else {
+                    clearFieldError(input);
+                }
+            });
+
+            // Email validation
+            const emailInput = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (data.email && !emailRegex.test(data.email)) {
+                showFieldError(emailInput, 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            // Phone validation (optional but if provided, should be valid)
+            const phoneInput = document.getElementById('phone');
+            if (data.phone && !isValidPhoneNumber(data.phone)) {
+                showFieldError(phoneInput, 'Please enter a valid Nigerian phone number');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Validate single field
+        function validateField(field) {
+            const value = field.value.trim();
+            
+            if (field.hasAttribute('required') && !value) {
+                showFieldError(field, 'This field is required');
+                return false;
+            }
+
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    showFieldError(field, 'Please enter a valid email address');
+                    return false;
+                }
+            }
+
+            if (field.type === 'tel' && value) {
+                if (!isValidPhoneNumber(value)) {
+                    showFieldError(field, 'Please enter a valid Nigerian phone number');
+                    return false;
+                }
+            }
+
+            clearFieldError(field);
+            return true;
+        }
+
+        // Validate Nigerian phone number
+        function isValidPhoneNumber(phone) {
+            const phoneRegex = /^(\+?234|0)[789][01]\d{8}$/;
+            return phoneRegex.test(phone.replace(/\s/g, ''));
+        }
+
+        // Show field error
+        function showFieldError(field, message) {
+            clearFieldError(field);
+            
+            field.classList.add('error');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'field-error';
+            errorDiv.style.cssText = `
+                color: #F44336;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+            `;
+            errorDiv.textContent = message;
+            
+            field.parentNode.appendChild(errorDiv);
+        }
+
+        // Clear field error
+        function clearFieldError(field) {
+            field.classList.remove('error');
+            const errorDiv = field.parentNode.querySelector('.field-error');
+            if (errorDiv) {
+                errorDiv.remove();
+            }
+        }
+
+        // Submit contact form
+        function submitContactForm(data) {
+            const submitButton = document.querySelector('#contact-form button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success message
+                const successMessage = document.getElementById('success-message');
+                successMessage.classList.add('show');
+
+                // Reset form
+                document.getElementById('contact-form').reset();
+
+                // Restore button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 5000);
+
+                // Log form data (in real application, this would be sent to server)
+                console.log('Form submitted:', data);
+
+            }, 1500);
+        }
+
+        // Newsletter form handling
+        function initializeNewsletterForm() {
+            const newsletterForm = document.getElementById('newsletter-form');
+            
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[name="email"]').value;
+                
+                const button = this.querySelector('button');
+                const originalText = button.textContent;
+                button.textContent = 'Subscribing...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    alert(`Thank you for subscribing! We'll send opportunities to ${email}`);
+                    this.reset();
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }, 1000);
+            });
+        }
+
+        // Add CSS for form errors
+        const additionalStyles = `
+            .form-control.error {
+                border-color: #F44336;
+            }
+
+            .field-error {
+                color: #F44336;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+            }
+        `;
+
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = additionalStyles;
+        document.head.appendChild(styleSheet);
+    </script>
+</body>
+</html>

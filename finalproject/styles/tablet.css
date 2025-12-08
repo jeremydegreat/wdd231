@@ -1,0 +1,11 @@
+/* =====================================================================
+   TABLET (≥768px)
+===================================================================== */
+@media (min-width: 768px) {
+
+    .stats { grid-template-columns: repeat(3,1fr); }
+    .opportunities-grid { grid-template-columns: repeat(2,1fr); }
+    .resource-item, #contactForm { max-width: 600px; margin: auto; }
+    .tabs { justify-content: center; }
+    .tab-button { max-width: 200px; }
+}
