@@ -250,6 +250,23 @@ function animateStats() {
     });
 }
 
+// For Lastmodified date
+const lastModifiedElement = document.getElementById("lastmodified");
+
+    if (lastModifiedElement) {
+        const modifiedDate = new Date(document.lastModified);
+        const formattedDate = modifiedDate.toLocaleString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+        });
+
+        lastModifiedElement.textContent = "Last Updated: " + formattedDate;
+    }
+
 // Run animation when DOM is ready
 document.addEventListener('DOMContentLoaded', animateStats);
 
