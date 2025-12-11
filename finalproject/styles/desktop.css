@@ -1,23 +1,130 @@
-/* =====================================================================
-   DESKTOP (≥1024px)
-===================================================================== */
-@media (min-width: 1024px) {
-
-    header { padding: 1.5rem 3rem; }
-    .hamburger { display: none; }
-
-    .nav-menu {
-        display: flex !important;
-        flex-direction: row;
-        gap: 2rem;
-        background: none;
-        padding: 0;
+/* Desktop-specific styles (1025px and above) */
+@media (min-width: 1025px) {
+    /* Section spacing - restore full padding */
+    .section {
+        padding: 80px 0;
     }
-
-    .hero { padding: 4rem 1rem; }
-    .hero h1 { font-size: 3rem; }
-
-    .opportunities-grid { grid-template-columns: repeat(3,1fr); }
-
-    .tab-section { max-width: 1000px; margin: auto; }
+    .navbar-container {
+        padding: 1rem 2rem;
+        gap: 2rem; 
+    }
+    
+    /* Reset nav for desktop */
+    .navbar {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    .navbar-nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        width: auto;
+        gap: 2rem; 
+    }
+    .navbar-nav a {
+        padding: .5rem 1rem;
+        white-space: nowrap;
+        border-bottom-right-radius: 40%;
+        border-top-left-radius: 40%;
+    }
+    
+    /* Hide hamburger on desktop */
+    .navbar-toggle {
+        display: none;
+    }
+    
+    /* Container - maintain max-width and padding */
+    .container {
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero p {
+        font-size: 1.8rem;
+    }
+    
+    /* Filters - full padding and margin */
+    .filters {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+    
+    /* Filter form - auto-fit to utilize available space */
+    .filter-form {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    
+    /* Results spacing */
+    .results-counter {
+        margin-bottom: 30px;
+    }
+    
+    /* All grids - 3 columns optimal for desktop */
+    .opportunities-grid,
+    .loading-state,
+    .featured-programs {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    /* Section header - full typography scale */
+    .section-header {
+        margin-bottom: 60px;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .section-header p {
+        font-size: 1.2rem;
+        margin-top: 25px;
+    }
+    
+    /* Buttons - standard desktop sizing */
+    .btn {
+        width: auto;
+        max-width: none;
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+    
+    /* Cards - full padding */
+    .program-card,
+    .skeleton-card,
+    .story-card {
+        padding: 40px 30px;
+    }
+    
+    /* Program details - row layout */
+    .program-details {
+        flex-direction: row;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    
+    /* Program icon */
+    .program-icon {
+        font-size: 3.5rem;
+    }
+    
+    /* Story headings */
+    .story-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* No results message */
+    #no-results {
+        padding: 60px 20px;
+    }
 }

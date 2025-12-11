@@ -3,293 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anambra Jobs & Skills Hub | Home</title>
-    <meta name="description" content="Explore the demo business directory of the Awka Chamber of Commerce — connecting local enterprises, startups, and investors in Anambra State.">
-    <meta name="author" content="Chinedu Jeremiah Iloabuchi">
-
-    <!-- Open graph meta tags -->
-    <meta property="og:title" content="Anambra Jobs & Skills Hub">
-    <meta property="og:description" content="Verified jobs and skills opportunities for Anambra youths.">
+    <title>Anambra Jobs & Skills Hub - Connect. Learn. Grow.</title>
+    <meta name="description" content="Connect Anambra State youths with verified jobs, vocational training, apprenticeships, and career resources. Your gateway to professional growth and opportunities.">
+    <meta name="author" content="Chinedu Jeremiah ILoabuchi">
+    <meta name="keywords" content="Anambra jobs, vocational training, apprenticeships, career development, employment opportunities, skills development">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Anambra Jobs & Skills Hub - Connect. Learn. Grow.">
+    <meta property="og:description" content="Connect Anambra State youths with verified jobs, vocational training, apprenticeships, and career resources.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/awkajobskillhub.webp">
-    <meta property="og:url" content="https://Jeremydegreat.github.io/wdd231/chamber/directory.html">
-
+    <meta property="og:url" content="https://anambrajobs.com">
+    <meta property="og:image" content="./assets/hero-image.png">
+    <meta property="og:site_name" content="Anambra Jobs & Skills Hub">
+    
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Anambra Jobs & Skills Hub - Connect. Learn. Grow.">
     <meta name="twitter:description" content="Connect Anambra State youths with verified jobs, vocational training, apprenticeships, and career resources.">
     <meta name="twitter:image" content="./assets/hero-image.png">
-
-    <!-- Google Fonts -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
-    <!-- Css Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/tablet.css">
     <link rel="stylesheet" href="styles/desktop.css">
-
-    <!-- JavaScript Links -->
-    <script src="scripts/main.js" type="module"></script>
-    <script src="scripts/nav.js" type="module"></script>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- header section -->
-    <header class="header">
-
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logoacoc.svg" alt="AJSH logo">
-        </div>
-
-        <!-- Navbar -->
-        <nav class="navbar">
-            <ul class="navlinks">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/logo.webp" alt="AJSH logo">
+            </a>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" >
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="opportunities.html">Opporturnities</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">contact</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Hamburger -->
-        <button class="hamburger" aria-label="Toggle mobile menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Connect. Learn. Grow.</h1>
+                <p>Your gateway to verified jobs, vocational training, and career opportunities in Anambra State. Join thousands of young professionals building their future.</p>
+                <div class="hero-buttons">
+                    <a href="opportunities.html" class="btn btn-primary">Find Jobs</a>
+                    <a href="resources.html" class="btn btn-secondary">Learn a Skill</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- MAIN SECTION -->
-    <main class="web-container">
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="287">0</span>
+                    <span class="stat-label">Active Opportunities</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="45">0</span>
+                    <span class="stat-label">Partner Companies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1200">0</span>
+                    <span class="stat-label">Youths Placed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="70">0</span>
+                    <span class="stat-label">Training Centers</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Connect. Learn. Grow.</h1>
-                    <p>Your gateway to verified jobs, vocational training, and career opportunities in Anambra State. Join thousands of young professionals building their future.</p>
-                    <div class="hero-buttons">
-                        <a href="opportunities.html" class="btn btn-primary">Find Jobs</a>
-                        <a href="resources.html" class="btn btn-secondary">Learn a Skill</a>
+    <!-- Latest Opportunities Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Opportunities</h2>
+                <p>Discover the newest jobs, training programs, and apprenticeships available in Anambra State</p>
+            </div>
+            <div class="latest-opportunities opportunities-grid">
+                <!-- Opportunities will be loaded dynamically -->
+                <div class="loading-state">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="opportunities.html" class="btn btn-primary">View All Opportunities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Showcase Section -->
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Leading Companies</h2>
+                <p>Connect with top employers and training providers across Anambra State</p>
+            </div>
+            <div class="company-showcase">
+                <div class="splide" id="company-slider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="company-logo">
+                                    <h3>Innoson</h3>
+                                    <p>Vehicle Manufacturing</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="company-logo">
+                                    <h3>Cutix Plc</h3>
+                                    <p>Cable Manufacturing</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="company-logo">
+                                    <h3>FairMoney</h3>
+                                    <p>Digital Banking</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="company-logo">
+                                    <h3>Anambra State Govt</h3>
+                                    <p>Public Sector</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="company-logo">
+                                    <h3>TeamAce Limited</h3>
+                                    <p>HR Solutions</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="company-logo">
+                                    <h3>Neveah Limited</h3>
+                                    <p>Trading Company</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="company-logo">
+                                    <h3>I-Swipe Tech</h3>
+                                    <p>Technology Training</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="company-logo">
+                                    <h3>Microview Limited</h3>
+                                    <p>IT Solutions</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Latest Opportunities Section -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Latest Opportunities</h2>
-                    <p>Discover the newest jobs, training programs, and apprenticeships available in Anambra State</p>
-                </div>
-                <div class="latest-opportunities opportunities-grid">
-                    <!-- Opportunities will be loaded dynamically -->
-                    <div class="loading-state">
-                        <div class="skeleton-card"></div>
-                        <div class="skeleton-card"></div>
-                        <div class="skeleton-card"></div>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="opportunities.html" class="btn btn-primary">View All Opportunities</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Company Showcase Section -->
-        <section class="section" style="background: var(--white);">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Trusted by Leading Companies</h2>
-                    <p>Connect with top employers and training providers across Anambra State</p>
-                </div>
-                <div class="company-showcase">
-                    <div class="splide" id="company-slider">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <div class="company-logo">
-                                        <h3>Innoson</h3>
-                                        <p>Vehicle Manufacturing</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="company-logo">
-                                        <h3>Cutix Plc</h3>
-                                        <p>Cable Manufacturing</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="company-logo">
-                                        <h3>FairMoney</h3>
-                                        <p>Digital Banking</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="company-logo">
-                                        <h3>Anambra State Govt</h3>
-                                        <p>Public Sector</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="company-logo">
-                                        <h3>TeamAce Limited</h3>
-                                        <p>HR Solutions</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="company-logo">
-                                        <h3>Neveah Limited</h3>
-                                        <p>Trading Company</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="company-logo">
-                                        <h3>I-Swipe Tech</h3>
-                                        <p>Technology Training</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="company-logo">
-                                        <h3>Microview Limited</h3>
-                                        <p>IT Solutions</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="newsletter">
-            <div class="container">
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="section-header">
                 <h2>Stay Updated with New Opportunities</h2>
                 <p>Get the latest jobs and training programs delivered to your inbox</p>
-                <form class="newsletter-form" id="newsletter-form">
-                    <input type="email" name="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-secondary">Subscribe</button>
-                </form>
             </div>
-        </section>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-secondary">Subscribe</button>
+            </form>
+        </div>
+    </section>
 
-        <!-- Success Stories Section -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Success Stories</h2>
-                    <p>See how Anambra youths are building their careers through our platform</p>
-                </div>
-                <div class="success-stories">
-                    <div class="story-card">
-                        <div class="story-content">
-                            <h3>From Unemployment to Software Developer</h3>
-                            <p>"After completing the Code Anambra program, I landed my dream job as a frontend developer at a tech company in Awka. The training was intensive but worth it."</p>
-                            <div class="story-author">
-                                <strong>Chinwe Okoli</strong>
-                                <span>Frontend Developer, Awka</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-card">
-                        <div class="story-content">
-                            <h3>Manufacturing Career Success</h3>
-                            <p>"The apprenticeship at Innoson gave me practical skills in automobile assembly. Now I'm a team lead with a stable income and growth opportunities."</p>
-                            <div class="story-author">
-                                <strong>Emeka Nwosu</strong>
-                                <span>Team Lead, Innoson Motors</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-card">
-                        <div class="story-content">
-                            <h3>Entrepreneurship Through Training</h3>
-                            <p>"The fashion design training helped me start my own boutique in Onitsha. I now employ three other young people from my community."</p>
-                            <div class="story-author">
-                                <strong>Amaka Okafor</strong>
-                                <span>Fashion Designer & Entrepreneur</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Success Stories Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories</h2>
+                <p>See how Anambra youths are building their careers through our platform</p>
             </div>
-        </section>
-    </main>
-
-    <!-- FOOTER SECTION -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-address">
-                    <h4>Awka Chamber Of Commerce Awka, Anambra state.</h4>
-                    <p>
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M12 2C8.7 2 6 4.7 6 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.3-2.7-6-6-6zm0 8.5c-1.4 0-2.5-1.12-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.1 2.5-2.5 2.5z"/>
-                        </svg>
-                        No 5 Chief Pius Mbanusi Okpuno
-                    </p>
-                    <p>
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M3 13h18v2H3v-2zm3-8h2v6H6V5zm4-3h2v9h-2V2zm4 5h2v4h-2V7z"/>
-                        </svg>
-                        Awka, Anambra state.
-                    </p>
-
-                    <p>
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M2 4h20v16H2V4zm10 7l10-6H2l10 6zm0 2L2 6v12h20V6l-10 7z"/>
-                        </svg>
-                        support@awkachamberofcommerce.org
-                    </p>
-
-                    <p>
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.9-1.9c.3-.3.8-.4 1.1-.2 1.2.4 2.6.7 3.9.7.6 0 1 .4 1 1v3.1c0 .6-.4 1-1 1C10.3 20.1 1.9 11.7 1.9 1c0-.6.4-1 1-1H6c.6 0 1 .4 1 1 0 1.3.2 2.7.7 3.9.1.4 0 .8-.2 1.1l-1.9 1.8z"/>
-                        </svg>
-                        +23483389340
-                    </p>
+            <div class="success-stories">
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3>From Unemployment to Software Developer</h3>
+                        <p>"After completing the Code Anambra program, I landed my dream job as a frontend developer at a tech company in Awka. The training was intensive but worth it."</p>
+                        <div class="story-author">
+                            <strong>Chinwe Okoli</strong>
+                            <span>Frontend Developer, Awka</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="footer-copyright">
-                    <h4>WDD231 Class Project</h4>
-                    <p>
-                        <!-- Person Icon -->
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M12 12c2.7 0 8 1.3 8 4v2H4v-2c0-2.7 5.3-4 8-4zm0-2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 
-                            1.8 4 4-1.8 4-4 4z"/>
-                        </svg>
-                        Chinedu Jeremiah Iloabuchi
-                    </p>
-
-                    <p>
-                        <!-- Copyright Icon -->
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18c-4.4 
-                            0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 
-                            8zm0-13a5 5 0 100 10 5 5 0 000-10zm0 
-                            8c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.1 0 2 
-                            .6 2.5 1.5l1.7-1A5 5 0 0012 5a5 5 0 000 
-                            10c1.8 0 3.4-1 4.2-2.5l-1.7-1A3 3 0 0112 
-                            15z"/>
-                        </svg>
-                        © 2025 Awka Chamber Of Commerce
-                    </p>
-
-                    <p id="lastmodified"></p>
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3>Manufacturing Career Success</h3>
+                        <p>"The apprenticeship at Innoson gave me practical skills in automobile assembly. Now I'm a team lead with a stable income and growth opportunities."</p>
+                        <div class="story-author">
+                            <strong>Emeka Nwosu</strong>
+                            <span>Team Lead, Innoson Motors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3>Entrepreneurship Through Training</h3>
+                        <p>"The fashion design training helped me start my own boutique in Onitsha. I now employ three other young people from my community."</p>
+                        <div class="story-author">
+                            <strong>Amaka Okafor</strong>
+                            <span>Fashion Designer & Entrepreneur</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Anambra Jobs & Skills Hub. Empowering Anambra youths through opportunities.</p>
+            <p>
+                <a href="attributions.html">Attributions</a> | 
+                Built with ❤️ for Anambra State
+            </p>
+            <p id="lastmodified"></p>
+
+        </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="scripts/utils.js"></script>
+    <script type="module" src="scripts/main-index.js"></script>
+
 </body>
 </html>

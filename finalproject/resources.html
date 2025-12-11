@@ -3,361 +3,685 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anambra Jobs & Skills Hub – Resources</title>
-    <meta name="description" content="Explore the demo business directory of the Awka Chamber of Commerce — connecting local enterprises, startups, and investors in Anambra State.">
-    <meta name="author" content="Chinedu Jeremiah Iloabuchi">
-
-    <!-- Open graph meta tags -->
-    <meta property="og:title" content="Anambra Jobs & Skills Hub">
-    <meta property="og:description" content="Verified jobs and skills opportunities for Anambra youths.">
+    <title>Resources & Contact - Anambra Jobs & Skills Hub</title>
+    <meta name="description" content="Access career resources, download CV templates, interview guides, and get in touch with our team. Everything you need for career success in Anambra State.">
+    <meta name="author" content="Anambra Jobs & Skills Hub">
+    <meta name="keywords" content="career resources, CV template, interview guide, contact, career support">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Resources & Contact - Anambra Jobs & Skills Hub">
+    <meta property="og:description" content="Access career resources, download CV templates, interview guides, and get in touch with our team.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/awkajobskillhub.webp">
-    <meta property="og:url" content="https://Jeremydegreat.github.io/wdd231/chamber/directory.html">
-
+    <meta property="og:url" content="https://anambrajobs.com/resources.html">
+    <meta property="og:image" content="./assets/hero-image.png">
+    <meta property="og:site_name" content="Anambra Jobs & Skills Hub">
+    
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Resources & Contact - Anambra Jobs & Skills Hub">
     <meta name="twitter:description" content="Access career resources, download CV templates, interview guides, and get in touch with our team.">
     <meta name="twitter:image" content="./assets/hero-image.png">
-
-    <!-- Google Fonts -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
-    <!-- Css Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/tablet.css">
     <link rel="stylesheet" href="styles/desktop.css">
-
-    <!-- JavaScript Links -->
-    <script src="scripts/main-index.js" type="module"></script>
-    <script src="scripts/nav.js" type="module"></script>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
 </head>
 <body>
-    <!-- header section -->
-    <header class="header">
-
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logoacoc.svg" alt="Awka chamber of commerce official logo">
-        </div>
-
-        <!-- Navbar -->
-        <nav class="navbar">
-            <ul class="navlinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="opportunities.html">Opporturnities</a></li>
-                <li><a href="resources.html">Resources</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/logo.webp" alt="AJSH logo">
+            </a>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" >
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opportunities.html" >Opportunities</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Hamburger -->
-        <button class="hamburger" aria-label="Toggle mobile menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1>Resources & Support</h1>
+            <p style="font-size: 1.125rem; opacity: 0.9; margin-top: 1rem;">
+                Access career resources, tools, and get the support you need to succeed in your career journey.
+            </p>
+        </div>
+    </section>
 
-
-    <main class="resources-page">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container text-center">
-                <h1>Resources & Support</h1>
-                <p style="font-size: 1.125rem; opacity: 0.9; margin-top: 1rem;">
-                    Access career resources, tools, and get the support you need to succeed in your career journey.
-                </p>
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Tabs Navigation -->
+            <div class="tabs">
+                <button class="tab-button active" data-tab="resources">📚 Career Resources</button>
+                <button class="tab-button" data-tab="contact">📞 Contact Us</button>
             </div>
-        </section>
 
-        <!-- Main Content -->
-        <section class="section">
-            <div class="container">
-                <!-- Tabs Navigation -->
-                <div class="tabs">
-                    <button class="tab-button active" data-tab="resources">📚 Career Resources</button>
-                    <button class="tab-button" data-tab="contact">📞 Contact Us</button>
+            <!-- Resources Tab -->
+            <div id="resources" class="tab-content active">
+                <div class="section-header">
+                    <h2>Career Resources</h2>
+                    <p>Essential tools and resources to boost your career prospects and professional development</p>
                 </div>
 
-                <!-- Resources Tab -->
-                <div id="resources" class="tab-content active">
-                    <div class="section-header">
-                        <h2>Career Resources</h2>
-                        <p>Essential tools and resources to boost your career prospects and professional development</p>
+                <div class="resources-grid">
+                    <!-- CV Template Resource -->
+                    <div class="resource-card">
+                        <span class="resource-icon">📄</span>
+                        <h3>Professional CV Template</h3>
+                        <p>Download our professionally designed CV template tailored for the Nigerian job market. Includes guidelines and examples for different industries.</p>
+                        <div class="resource-meta">
+                            <small>Format: PDF, DOCX</small>
+                            <small>Size: ~2MB</small>
+                        </div>
+                        <button class="btn btn-primary download-link" onclick="downloadResource('cv-template')">
+                            Download CV Template
+                        </button>
                     </div>
 
-                    <div class="resources-grid">
-                        <!-- CV Template Resource -->
-                        <div class="resource-card">
-                            <span class="resource-icon">📄</span>
-                            <h3>Professional CV Template</h3>
-                            <p>Download our professionally designed CV template tailored for the Nigerian job market. Includes guidelines and examples for different industries.</p>
-                            <div class="resource-meta">
-                                <small>Format: PDF, DOCX</small>
-                                <small>Size: ~2MB</small>
-                            </div>
-                            <button class="btn btn-primary download-link" onclick="downloadResource('cv-template')">
-                                Download CV Template
-                            </button>
+                    <!-- Interview Guide Resource -->
+                    <div class="resource-card">
+                        <span class="resource-icon">🎯</span>
+                        <h3>Interview Success Guide</h3>
+                        <p>Comprehensive guide to acing job interviews, including common questions, preparation tips, and follow-up strategies specific to Nigerian companies.</p>
+                        <div class="resource-meta">
+                            <small>Format: PDF</small>
+                            <small>Pages: 45</small>
                         </div>
-
-                        <!-- Interview Guide Resource -->
-                        <div class="resource-card">
-                            <span class="resource-icon">🎯</span>
-                            <h3>Interview Success Guide</h3>
-                            <p>Comprehensive guide to acing job interviews, including common questions, preparation tips, and follow-up strategies specific to Nigerian companies.</p>
-                            <div class="resource-meta">
-                                <small>Format: PDF</small>
-                                <small>Pages: 45</small>
-                            </div>
-                            <button class="btn btn-primary download-link" onclick="downloadResource('interview-guide')">
-                                Download Guide
-                            </button>
-                        </div>
-
-                        <!-- Scholarship Tracker Resource -->
-                        <div class="resource-card">
-                            <span class="resource-icon">🎓</span>
-                            <h3>Scholarship Tracker</h3>
-                            <p>Stay updated with the latest scholarship opportunities for further education and skill development programs in Nigeria and abroad.</p>
-                            <div class="resource-meta">
-                                <small>Updated: Weekly</small>
-                                <small>Opportunities: 50+</small>
-                            </div>
-                            <a href="https://myschool.ng/scholarships" target="_blank" class="btn btn-primary">
-                                View Scholarships
-                            </a>
-                        </div>
-
-                        <!-- Skills Assessment Resource -->
-                        <div class="resource-card">
-                            <span class="resource-icon">📊</span>
-                            <h3>Skills Assessment Tool</h3>
-                            <p>Evaluate your current skills and get personalized recommendations for career paths and training programs that match your profile.</p>
-                            <div class="resource-meta">
-                                <small>Duration: 15 mins</small>
-                                <small>Free Assessment</small>
-                            </div>
-                            <button class="btn btn-primary" onclick="startSkillsAssessment()">
-                                Start Assessment
-                            </button>
-                        </div>
-
-                        <!-- Career Planning Guide Resource -->
-                        <div class="resource-card">
-                            <span class="resource-icon">🗺️</span>
-                            <h3>Career Planning Guide</h3>
-                            <p>Step-by-step guide to planning your career path, setting goals, and creating actionable plans for professional growth in Anambra State.</p>
-                            <div class="resource-meta">
-                                <small>Format: PDF</small>
-                                <small>Pages: 32</small>
-                            </div>
-                            <button class="btn btn-primary download-link" onclick="downloadResource('career-guide')">
-                                Download Guide
-                            </button>
-                        </div>
-
-                        <!-- Networking Guide Resource -->
-                        <div class="resource-card">
-                            <span class="resource-icon">🤝</span>
-                            <h3>Professional Networking Guide</h3>
-                            <p>Learn how to build and maintain professional relationships, leverage social media for career growth, and connect with industry professionals.</p>
-                            <div class="resource-meta">
-                                <small>Format: PDF</small>
-                                <small>Tips: 25+</small>
-                            </div>
-                            <button class="btn btn-primary download-link" onclick="downloadResource('networking-guide')">
-                                Download Guide
-                            </button>
-                        </div>
+                        <button class="btn btn-primary download-link" onclick="downloadResource('interview-guide')">
+                            Download Guide
+                        </button>
                     </div>
 
-                    <!-- Additional Resources -->
-                    <div style="margin-top: 3rem; padding: 2rem; background: var(--light-gray); border-radius: 12px;">
-                        <h3 style="color: var(--primary-teal); margin-bottom: 1rem;">Additional Support</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                            <div>
-                                <h4 style="color: var(--charcoal-text); margin-bottom: 0.5rem;">📞 Career Counseling</h4>
-                                <p style="font-size: 0.9rem; opacity: 0.8;">One-on-one sessions with career experts to guide your professional journey.</p>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--charcoal-text); margin-bottom: 0.5rem;">💼 Job Placement Support</h4>
-                                <p style="font-size: 0.9rem; opacity: 0.8;">Assistance with job applications, interview preparation, and placement services.</p>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--charcoal-text); margin-bottom: 0.5rem;">🎯 Skills Training</h4>
-                                <p style="font-size: 0.9rem; opacity: 0.8;">Access to vocational training programs and professional development courses.</p>
-                            </div>
+                    <!-- Scholarship Tracker Resource -->
+                    <div class="resource-card">
+                        <span class="resource-icon">🎓</span>
+                        <h3>Scholarship Tracker</h3>
+                        <p>Stay updated with the latest scholarship opportunities for further education and skill development programs in Nigeria and abroad.</p>
+                        <div class="resource-meta">
+                            <small>Updated: Weekly</small>
+                            <small>Opportunities: 50+</small>
                         </div>
+                        <a href="https://myschool.ng/scholarships" target="_blank" class="btn btn-primary">
+                            View Scholarships
+                        </a>
+                    </div>
+
+                    <!-- Skills Assessment Resource -->
+                    <div class="resource-card">
+                        <span class="resource-icon">📊</span>
+                        <h3>Skills Assessment Tool</h3>
+                        <p>Evaluate your current skills and get personalized recommendations for career paths and training programs that match your profile.</p>
+                        <div class="resource-meta">
+                            <small>Duration: 15 mins</small>
+                            <small>Free Assessment</small>
+                        </div>
+                        <button class="btn btn-primary" onclick="startSkillsAssessment()">
+                            Start Assessment
+                        </button>
+                    </div>
+
+                    <!-- Career Planning Guide Resource -->
+                    <div class="resource-card">
+                        <span class="resource-icon">🗺️</span>
+                        <h3>Career Planning Guide</h3>
+                        <p>Step-by-step guide to planning your career path, setting goals, and creating actionable plans for professional growth in Anambra State.</p>
+                        <div class="resource-meta">
+                            <small>Format: PDF</small>
+                            <small>Pages: 32</small>
+                        </div>
+                        <button class="btn btn-primary download-link" onclick="downloadResource('career-guide')">
+                            Download Guide
+                        </button>
+                    </div>
+
+                    <!-- Networking Guide Resource -->
+                    <div class="resource-card">
+                        <span class="resource-icon">🤝</span>
+                        <h3>Professional Networking Guide</h3>
+                        <p>Learn how to build and maintain professional relationships, leverage social media for career growth, and connect with industry professionals.</p>
+                        <div class="resource-meta">
+                            <small>Format: PDF</small>
+                            <small>Tips: 25+</small>
+                        </div>
+                        <button class="btn btn-primary download-link" onclick="downloadResource('networking-guide')">
+                            Download Guide
+                        </button>
                     </div>
                 </div>
 
-                <!-- Contact Tab -->
-                <div id="contact" class="tab-content">
-                    <div class="section-header">
-                        <h2>Get in Touch</h2>
-                        <p>We're here to help you succeed. Reach out with any questions or for personalized support.</p>
-                    </div>
-
-                    <!-- Success Message -->
-                    <div id="success-message" class="success-message">
-                        <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you within 24 hours.
-                    </div>
-
-                    <!-- Contact Form -->
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" class="form-control" required>
-                            </div>
+                <!-- Additional Resources -->
+                <div style="margin-top: 3rem; padding: 2rem; background: var(--light-gray); border-radius: 12px;">
+                    <h3 style="color: var(--primary-teal); margin-bottom: 1rem;">Additional Support</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <h4 style="color: var(--charcoal-text); margin-bottom: 0.5rem;">📞 Career Counseling</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">One-on-one sessions with career experts to guide your professional journey.</p>
                         </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-control">
-                            </div>
+                        <div>
+                            <h4 style="color: var(--charcoal-text); margin-bottom: 0.5rem;">💼 Job Placement Support</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Assistance with job applications, interview preparation, and placement services.</p>
                         </div>
-
-                        <div class="form-group">
-                            <label for="category">Inquiry Category *</label>
-                            <select id="category" name="category" class="form-control" required>
-                                <option value="">Select a category</option>
-                                <option value="job-support">Job Search Support</option>
-                                <option value="training">Training Programs</option>
-                                <option value="career-counseling">Career Counseling</option>
-                                <option value="partnership">Partnership Inquiry</option>
-                                <option value="technical">Technical Support</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" class="form-control" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" class="form-control" required placeholder="Please describe how we can help you..."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-
-                    <!-- Contact Information -->
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📍</div>
-                            <h4>Office Location</h4>
-                            <p>Solution Innovation District<br>Awka, Anambra State<br>Nigeria</p>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📞</div>
-                            <h4>Phone Support</h4>
-                            <p>+234 703 123 4567<br>+234 802 987 6543<br>Mon-Fri: 9AM-5PM</p>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">✉️</div>
-                            <h4>Email Support</h4>
-                            <p>info@anambrajobs.com<br>support@anambrajobs.com<br>Response within 24hrs</p>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">💬</div>
-                            <h4>Live Chat</h4>
-                            <p>Available on website<br>Mon-Fri: 8AM-6PM<br>Weekends: 10AM-4PM</p>
+                        <div>
+                            <h4 style="color: var(--charcoal-text); margin-bottom: 0.5rem;">🎯 Skills Training</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Access to vocational training programs and professional development courses.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <!-- FOOTER SECTION -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-address">
-                    <h4>Awka Chamber Of Commerce Awka, Anambra state.</h4>
-                    <p>
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M12 2C8.7 2 6 4.7 6 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.3-2.7-6-6-6zm0 8.5c-1.4 0-2.5-1.12-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.1 2.5-2.5 2.5z"/>
-                        </svg>
-                        No 5 Chief Pius Mbanusi Okpuno
-                    </p>
-                    <p>
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M3 13h18v2H3v-2zm3-8h2v6H6V5zm4-3h2v9h-2V2zm4 5h2v4h-2V7z"/>
-                        </svg>
-                        Awka, Anambra state.
-                    </p>
-
-                    <p>
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M2 4h20v16H2V4zm10 7l10-6H2l10 6zm0 2L2 6v12h20V6l-10 7z"/>
-                        </svg>
-                        support@awkachamberofcommerce.org
-                    </p>
-
-                    <p>
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.9-1.9c.3-.3.8-.4 1.1-.2 1.2.4 2.6.7 3.9.7.6 0 1 .4 1 1v3.1c0 .6-.4 1-1 1C10.3 20.1 1.9 11.7 1.9 1c0-.6.4-1 1-1H6c.6 0 1 .4 1 1 0 1.3.2 2.7.7 3.9.1.4 0 .8-.2 1.1l-1.9 1.8z"/>
-                        </svg>
-                        +23483389340
-                    </p>
+            <!-- Contact Tab -->
+            <div id="contact" class="tab-content">
+                <div class="section-header">
+                    <h2>Get in Touch</h2>
+                    <p>We're here to help you succeed. Reach out with any questions or for personalized support.</p>
                 </div>
-                
-                <div class="footer-copyright">
-                    <h4>WDD231 Class Project</h4>
-                    <p>
-                        <!-- Person Icon -->
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M12 12c2.7 0 8 1.3 8 4v2H4v-2c0-2.7 5.3-4 8-4zm0-2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 
-                            1.8 4 4-1.8 4-4 4z"/>
-                        </svg>
-                        Chinedu Jeremiah Iloabuchi
-                    </p>
 
-                    <p>
-                        <!-- Copyright Icon -->
-                        <svg width="18" height="18" fill="currentColor" style="margin-right:8px;">
-                            <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18c-4.4 
-                            0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 
-                            8zm0-13a5 5 0 100 10 5 5 0 000-10zm0 
-                            8c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.1 0 2 
-                            .6 2.5 1.5l1.7-1A5 5 0 0012 5a5 5 0 000 
-                            10c1.8 0 3.4-1 4.2-2.5l-1.7-1A3 3 0 0112 
-                            15z"/>
-                        </svg>
-                        © 2025 Awka Chamber Of Commerce
-                    </p>
+                <!-- Success Message -->
+                <div id="success-message" class="success-message">
+                    <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you within 24 hours.
+                </div>
 
-                    <p id="lastmodified"></p>
+                <!-- Contact Form -->
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Inquiry Category *</label>
+                        <select id="category" name="category" class="form-control" required>
+                            <option value="">Select a category</option>
+                            <option value="job-support">Job Search Support</option>
+                            <option value="training">Training Programs</option>
+                            <option value="career-counseling">Career Counseling</option>
+                            <option value="partnership">Partnership Inquiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-control" required placeholder="Please describe how we can help you..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <h4>Office Location</h4>
+                        <p>Solution Innovation District<br>Awka, Anambra State<br>Nigeria</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📞</div>
+                        <h4>Phone Support</h4>
+                        <p>+234 703 123 4567<br>+234 802 987 6543<br>Mon-Fri: 9AM-5PM</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">✉️</div>
+                        <h4>Email Support</h4>
+                        <p>info@anambrajobs.com<br>support@anambrajobs.com<br>Response within 24hrs</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">💬</div>
+                        <h4>Live Chat</h4>
+                        <p>Available on website<br>Mon-Fri: 8AM-6PM<br>Weekends: 10AM-4PM</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Anambra Jobs & Skills Hub. Empowering Anambra youths through opportunities.</p>
+            <p>
+                <a href="attributions.html">Attributions</a> | 
+                Built with ❤️ for Anambra State
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="main.js"></script>
+    <script>
+        // Initialize resources page
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTabs();
+            initializeContactForm();
+        });
+
+        // Tab switching functionality
+        function initializeTabs() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+
+                    // Remove active class from all tabs and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+
+                    // Update URL hash for bookmarking
+                    window.location.hash = targetTab;
+                });
+            });
+
+            // Check for hash in URL and activate corresponding tab
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetButton = document.querySelector(`[data-tab="${hash}"]`);
+                if (targetButton) {
+                    targetButton.click();
+                }
+            }
+        }
+
+        // Contact form handling
+        function initializeContactForm() {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Validate form
+                if (validateContactForm(data)) {
+                    submitContactForm(data);
+                }
+            });
+
+            // Real-time validation
+            const inputs = contactForm.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    validateField(this);
+                });
+            });
+        }
+
+        // Validate contact form
+        function validateContactForm(data) {
+            const required = ['firstName', 'lastName', 'email', 'category', 'subject', 'message'];
+            let isValid = true;
+
+            required.forEach(field => {
+                const input = document.getElementById(field);
+                if (!data[field] || data[field].trim() === '') {
+                    showFieldError(input, 'This field is required');
+                    isValid = false;
+                } else {
+                    clearFieldError(input);
+                }
+            });
+
+            // Email validation
+            const emailInput = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (data.email && !emailRegex.test(data.email)) {
+                showFieldError(emailInput, 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            // Phone validation (optional but if provided, should be valid)
+            const phoneInput = document.getElementById('phone');
+            if (data.phone && !isValidPhoneNumber(data.phone)) {
+                showFieldError(phoneInput, 'Please enter a valid Nigerian phone number');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Validate single field
+        function validateField(field) {
+            const value = field.value.trim();
+            
+            if (field.hasAttribute('required') && !value) {
+                showFieldError(field, 'This field is required');
+                return false;
+            }
+
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    showFieldError(field, 'Please enter a valid email address');
+                    return false;
+                }
+            }
+
+            if (field.type === 'tel' && value) {
+                if (!isValidPhoneNumber(value)) {
+                    showFieldError(field, 'Please enter a valid Nigerian phone number');
+                    return false;
+                }
+            }
+
+            clearFieldError(field);
+            return true;
+        }
+
+        // Validate Nigerian phone number
+        function isValidPhoneNumber(phone) {
+            const phoneRegex = /^(\+?234|0)[789][01]\d{8}$/;
+            return phoneRegex.test(phone.replace(/\s/g, ''));
+        }
+
+        // Show field error
+        function showFieldError(field, message) {
+            clearFieldError(field);
+            
+            field.classList.add('error');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'field-error';
+            errorDiv.style.cssText = `
+                color: #F44336;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+            `;
+            errorDiv.textContent = message;
+            
+            field.parentNode.appendChild(errorDiv);
+        }
+
+        // Clear field error
+        function clearFieldError(field) {
+            field.classList.remove('error');
+            const errorDiv = field.parentNode.querySelector('.field-error');
+            if (errorDiv) {
+                errorDiv.remove();
+            }
+        }
+
+        // Submit contact form
+        function submitContactForm(data) {
+            const submitButton = document.querySelector('#contact-form button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success message
+                const successMessage = document.getElementById('success-message');
+                successMessage.classList.add('show');
+
+                // Reset form
+                document.getElementById('contact-form').reset();
+
+                // Restore button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 5000);
+
+                // Log form data (in real application, this would be sent to server)
+                console.log('Form submitted:', data);
+
+            }, 1500);
+        }
+
+        // Download resource functionality
+        function downloadResource(resourceType) {
+            const resources = {
+                'cv-template': {
+                    name: 'Professional CV Template',
+                    filename: 'Anambra_Jobs_CV_Template.pdf',
+                    content: 'This is a professional CV template designed for the Nigerian job market. In a real application, this would download an actual PDF file with proper formatting and content guidelines.'
+                },
+                'interview-guide': {
+                    name: 'Interview Success Guide',
+                    filename: 'Interview_Success_Guide.pdf',
+                    content: 'This comprehensive interview guide covers common questions, preparation strategies, and follow-up techniques. In a real application, this would be a detailed 45-page PDF with practical examples and tips.'
+                },
+                'career-guide': {
+                    name: 'Career Planning Guide',
+                    filename: 'Career_Planning_Guide.pdf',
+                    content: 'Step-by-step career planning guide with goal setting and action plans. In a real application, this would be a comprehensive 32-page PDF with worksheets and planning templates.'
+                },
+                'networking-guide': {
+                    name: 'Professional Networking Guide',
+                    filename: 'Networking_Guide.pdf',
+                    content: 'Professional networking strategies and tips for building meaningful career relationships. In a real application, this would be a practical guide with actionable networking advice.'
+                }
+            };
+
+            const resource = resources[resourceType];
+            if (resource) {
+                // Track download
+                console.log(`Downloading: ${resource.name}`);
+                
+                // Create and download file
+                const blob = new Blob([resource.content], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = resource.filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                // Show success message
+                alert(`${resource.name} downloaded successfully! Check your downloads folder.`);
+            }
+        }
+
+        // Skills assessment functionality
+        function startSkillsAssessment() {
+            const questions = [
+                "What is your current level of education?",
+                "Which industry interests you most?",
+                "What is your current employment status?",
+                "How many years of work experience do you have?",
+                "What are your primary skills?",
+                "What type of work environment do you prefer?",
+                "What are your career goals for the next 2-5 years?",
+                "Which skills would you like to develop?"
+            ];
+
+            let currentQuestion = 0;
+            let answers = [];
+
+            function askQuestion() {
+                if (currentQuestion < questions.length) {
+                    const answer = prompt(`Question ${currentQuestion + 1} of ${questions.length}:\n\n${questions[currentQuestion]}`);
+                    if (answer !== null) {
+                        answers.push(answer);
+                        currentQuestion++;
+                        askQuestion();
+                    }
+                } else {
+                    showAssessmentResults();
+                }
+            }
+
+            function showAssessmentResults() {
+                const recommendations = [
+                    "Consider our Code Anambra program for tech skills",
+                    "Explore TVET training opportunities in your area",
+                    "Look into apprenticeship programs with local companies",
+                    "Update your CV with our professional template",
+                    "Schedule a career counseling session"
+                ];
+
+                let results = "Based on your responses, here are our recommendations:\n\n";
+                recommendations.forEach((rec, index) => {
+                    results += `${index + 1}. ${rec}\n`;
+                });
+
+                results += "\nFor personalized guidance, please contact our career counselors.";
+                alert(results);
+            }
+
+            askQuestion();
+        }
+
+        // Add CSS for modal and error states
+        const additionalStyles = `
+            .modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(4px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2000;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .modal-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .modal-content {
+                background: white;
+                border-radius: 16px;
+                max-width: 600px;
+                width: 90%;
+                max-height: 80vh;
+                overflow-y: auto;
+                position: relative;
+                transform: translateY(-50px) scale(0.9);
+                transition: all 0.3s ease;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            }
+
+            .modal-overlay.active .modal-content {
+                transform: translateY(0) scale(1);
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #666;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.2s ease;
+                z-index: 1;
+            }
+
+            .modal-close:hover {
+                background: #f5f5f5;
+                color: #333;
+            }
+
+            .modal-header {
+                padding: 2rem 2rem 1rem;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .modal-title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #00796B;
+                margin: 0;
+                padding-right: 3rem;
+            }
+
+            .modal-body {
+                padding: 1.5rem 2rem 2rem;
+            }
+
+            .form-control.error {
+                border-color: #F44336;
+            }
+
+            .field-error {
+                color: #F44336;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+            }
+        `;
+
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = additionalStyles;
+        document.head.appendChild(styleSheet);
+    </script>
 </body>
 </html>

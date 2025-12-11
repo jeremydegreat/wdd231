@@ -1,11 +1,115 @@
-/* =====================================================================
-   TABLET (≥768px)
-===================================================================== */
-@media (min-width: 768px) {
-
-    .stats { grid-template-columns: repeat(3,1fr); }
-    .opportunities-grid { grid-template-columns: repeat(2,1fr); }
-    .resource-item, #contactForm { max-width: 600px; margin: auto; }
-    .tabs { justify-content: center; }
-    .tab-button { max-width: 200px; }
+/* Tablet-specific styles (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .section {
+        padding: 3rem 2rem;
+    }
+    .navbar-container {
+        padding: 1rem 2rem;
+        gap: 2rem; 
+    }
+    
+    /* Reset nav for desktop */
+    .navbar-nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        width: auto;
+        gap: 2rem; 
+    }
+    .navbar-nav a {
+        padding: .5rem 1rem;
+        white-space: nowrap;
+        border-bottom-right-radius: 40%;
+        border-top-left-radius: 40%;
+    }
+    
+    /* Hide hamburger on desktop */
+    .navbar-toggle {
+        display: none;
+    }
+    
+    /* Container padding - restore desktop value */
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Filters section - restore desktop padding */
+    .filters {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    
+    /* Filter form - 2 columns for optimal tablet layout */
+    .filter-form {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Results counter spacing */
+    .results-counter {
+        margin-bottom: 30px;
+    }
+    
+    /* All grids - 2 columns on tablet */
+    .opportunities-grid,
+    .loading-state,
+    .featured-programs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+    
+    /* Section header typography */
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
+    .section-header h2 {
+        font-size: 2.3rem;
+    }
+    
+    .section-header p {
+        font-size: 1.1rem;
+        margin-top: 25px;
+    }
+    
+    /* Buttons - override mobile full-width behavior */
+    .btn {
+        width: auto;
+        max-width: none;
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+    
+    /* Cards - balanced padding between mobile and desktop */
+    .program-card,
+    .skeleton-card,
+    .story-card {
+        padding: 35px 25px;
+    }
+    
+    /* Program details - restore row layout */
+    .program-details {
+        flex-direction: row;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    
+    /* Program icon sizing */
+    .program-icon {
+        font-size: 3.5rem;
+    }
+    
+    /* Story content headings */
+    .story-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    /* No results message spacing */
+    #no-results {
+        padding: 50px 20px;
+    }
 }
