@@ -59,12 +59,30 @@ async function init() {
 
   // Attach event listeners
   attachEvents();
+
+  // Initialize Splide slider for company showcase
+  const slider = document.getElementById('company-slider');
+  if (slider) {
+    new Splide('#company-slider', {
+      type: 'loop',
+      perPage: 4,
+      autoplay: true,
+      gap: '1rem',
+      breakpoints: {
+        1024: { perPage: 3 },
+        768: { perPage: 2 },
+        480: { perPage: 1 }
+      }
+    }).mount();
+  }
 }
 
 function attachEvents() {
   // Filters: input and change
-  elements.filtersForm.addEventListener('input', debounce(handleFiltersChange, 250));
-  elements.filtersForm.addEventListener('change', handleFiltersChange);
+  if (elements.filtersForm) {
+    elements.filtersForm.addEventListener('input', debounce(handleFiltersChange, 250));
+    elements.filtersForm.addEventListener('change', handleFiltersChange);
+  }
 
   // Load more
   if (elements.loadMoreBtn) {
@@ -75,32 +93,34 @@ function attachEvents() {
   }
 
   // Delegate "View Details" clicks to open modal
-  elements.grid.addEventListener('click', (e) => {
-    const btn = e.target.closest('.view-details');
-    if (!btn) return;
-    const id = btn.dataset.id;
-    const item = allData.find(x => x.id === id);
-    if (item) {
-      openModal({
-        title: `${item.title} — ${item.company}`,
-        html: `
-          <p><strong>Location:</strong> ${escapeHTML(item.location)}</p>
-          <p><strong>Type:</strong> ${escapeHTML(item.type)} • <strong>Category:</strong> ${escapeHTML(item.category)}</p>
-          <p><strong>Salary:</strong> ${escapeHTML(item.salary)}</p>
-          <hr/>
-          <p>${escapeHTML(item.description)}</p>
-          <p style="margin-top:1rem;"><a class="btn btn-primary" href="${escapeHTML(item.apply_url)}" target="_blank" rel="noopener">Apply Now</a></p>
-        `
-      });
-    }
-  });
+  if (elements.grid) {
+    elements.grid.addEventListener('click', (e) => {
+      const btn = e.target.closest('.view-details');
+      if (!btn) return;
+      const id = btn.dataset.id;
+      const item = allData.find(x => x.id === id);
+      if (item) {
+        openModal({
+          title: `${item.title} — ${item.company}`,
+          html: `
+            <p><strong>Location:</strong> ${escapeHTML(item.location)}</p>
+            <p><strong>Type:</strong> ${escapeHTML(item.type)} • <strong>Category:</strong> ${escapeHTML(item.category)}</p>
+            <p><strong>Salary:</strong> ${escapeHTML(item.salary)}</p>
+            <hr/>
+            <p>${escapeHTML(item.description)}</p>
+            <p style="margin-top:1rem;"><a class="btn btn-primary" href="${escapeHTML(item.apply_url)}" target="_blank" rel="noopener">Apply Now</a></p>
+          `
+        });
+      }
+    });
+  }
 
   // Clear all filters global function
   window.clearAllFilters = () => {
-    elements.searchInput.value = '';
-    elements.typeSelect.value = '';
-    elements.locationSelect.value = '';
-    elements.categorySelect.value = '';
+    if (elements.searchInput) elements.searchInput.value = '';
+    if (elements.typeSelect) elements.typeSelect.value = '';
+    if (elements.locationSelect) elements.locationSelect.value = '';
+    if (elements.categorySelect) elements.categorySelect.value = '';
     handleFiltersChange();
   };
 
@@ -140,18 +160,19 @@ function applyFiltersAndRender() {
     })
     .sort((a, b) => new Date(b.date_posted) - new Date(a.date_posted));
 
-  // Update results count
-  const count = filteredData.length;
-  elements.resultsText.textContent = `${count} opportunity${count === 1 ? '' : 'ies'} found`;
+  // Update results count safely
+  if (elements.resultsText) {
+    elements.resultsText.textContent = `${filteredData.length} opportunity${filteredData.length === 1 ? '' : 'ies'} found`;
+  }
 
   // Handle no results
-  if (count === 0) {
-    elements.noResults.style.display = 'block';
-    elements.loadMoreContainer.style.display = 'none';
+  if (filteredData.length === 0) {
+    if (elements.noResults) elements.noResults.style.display = 'block';
+    if (elements.loadMoreContainer) elements.loadMoreContainer.style.display = 'none';
     renderNoResults(elements.grid);
     return;
   } else {
-    elements.noResults.style.display = 'none';
+    if (elements.noResults) elements.noResults.style.display = 'none';
   }
 
   currentPage = Math.max(1, currentPage);
@@ -165,13 +186,11 @@ function renderCurrentPage() {
   const pageItems = filteredData.slice(0, end);
 
   const html = pageItems.map(item => makeOpportunityCard(item)).join('');
-  elements.grid.innerHTML = html;
+  if (elements.grid) elements.grid.innerHTML = html;
 
   // Show/hide load more button
-  if (filteredData.length > end) {
-    elements.loadMoreContainer.style.display = 'block';
-  } else {
-    elements.loadMoreContainer.style.display = 'none';
+  if (elements.loadMoreContainer) {
+    elements.loadMoreContainer.style.display = filteredData.length > end ? 'block' : 'none';
   }
 }
 
@@ -187,18 +206,18 @@ function getFilterValues() {
 
 // Restore saved filter values in UI
 function restoreFilterUI(saved = {}) {
-  if (saved.search) elements.searchInput.value = saved.search;
-  if (saved.type) elements.typeSelect.value = saved.type;
-  if (saved.location) elements.locationSelect.value = saved.location;
-  if (saved.category) elements.categorySelect.value = saved.category;
+  if (elements.searchInput && saved.search) elements.searchInput.value = saved.search;
+  if (elements.typeSelect && saved.type) elements.typeSelect.value = saved.type;
+  if (elements.locationSelect && saved.location) elements.locationSelect.value = saved.location;
+  if (elements.categorySelect && saved.category) elements.categorySelect.value = saved.category;
 }
 
 // Apply incoming URL filters to UI
 function applyFilterValuesToUI(incoming = {}) {
-  if (incoming.search) elements.searchInput.value = incoming.search;
-  if (incoming.type) elements.typeSelect.value = incoming.type;
-  if (incoming.location) elements.locationSelect.value = incoming.location;
-  if (incoming.category) elements.categorySelect.value = incoming.category;
+  if (elements.searchInput && incoming.search) elements.searchInput.value = incoming.search;
+  if (elements.typeSelect && incoming.type) elements.typeSelect.value = incoming.type;
+  if (elements.locationSelect && incoming.location) elements.locationSelect.value = incoming.location;
+  if (elements.categorySelect && incoming.category) elements.categorySelect.value = incoming.category;
 }
 
 // Simple debounce utility
@@ -209,6 +228,30 @@ function debounce(fn, wait = 200) {
     timeout = setTimeout(() => fn.apply(this, args), wait);
   };
 }
+
+// Animate statistics numbers
+function animateStats() {
+    const stats = document.querySelectorAll('.stat-number');
+    stats.forEach(stat => {
+        const target = +stat.dataset.target; // get the target number
+        let count = 0;
+        const increment = Math.ceil(target / 200); // adjust speed
+
+        const update = () => {
+            count += increment;
+            if (count > target) count = target;
+            stat.textContent = count;
+            if (count < target) {
+                requestAnimationFrame(update); // smooth animation
+            }
+        };
+
+        update();
+    });
+}
+
+// Run animation when DOM is ready
+document.addEventListener('DOMContentLoaded', animateStats);
 
 // Escape HTML safely
 function escapeHTML(str = '') {

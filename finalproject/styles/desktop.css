@@ -50,6 +50,34 @@
     .hero p {
         font-size: 1.8rem;
     }
+    .stats {
+        padding: 6rem 0;
+    }
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    .stat-item {
+        flex: 1;
+        padding: 2.5rem 2rem;
+        background: transparent;
+    }
+    
+    .stat-item:hover {
+        background: var(--light-gray);
+    }
+    .stat-number {
+        font-size: 4rem;
+        color: var(--accent-gold);
+    }
+    
+    .stat-label {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    
     
     /* Filters - full padding and margin */
     .filters {

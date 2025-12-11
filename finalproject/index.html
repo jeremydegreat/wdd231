@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="./assets/hero-image.png">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/webp" href="assets/favicon/favicon.webp">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,8 +39,10 @@
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
 </head>
 <body>
     <!-- Navigation -->
@@ -107,19 +109,27 @@
                 <h2>Latest Opportunities</h2>
                 <p>Discover the newest jobs, training programs, and apprenticeships available in Anambra State</p>
             </div>
-            <div class="latest-opportunities opportunities-grid">
-                <!-- Opportunities will be loaded dynamically -->
-                <div class="loading-state">
-                    <div class="skeleton-card"></div>
-                    <div class="skeleton-card"></div>
-                    <div class="skeleton-card"></div>
-                </div>
+
+            <!-- Results counter -->
+            <p id="results-text" class="results-text">Loading opportunities...</p>
+
+            <!-- Opportunities grid -->
+            <div id="opportunities-grid" class="latest-opportunities opportunities-grid">
+                <!-- Skeleton loading state will be replaced dynamically -->
             </div>
+
+            <!-- No results message -->
+            <div id="no-results" class="no-results" style="display: none;">
+                <p>No opportunities found.</p>
+            </div>
+
             <div class="text-center mt-4">
                 <a href="opportunities.html" class="btn btn-primary">View All Opportunities</a>
             </div>
         </div>
     </section>
+
+
 
     <!-- Company Showcase Section -->
     <section class="section" style="background: var(--white);">
@@ -257,8 +267,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script type="module" src="scripts/utils.js"></script>
-    <script type="module" src="scripts/main-index.js"></script>
+    <script type="module" src="scripts/main-opportunities.js"></script>
 
 </body>
 </html>
